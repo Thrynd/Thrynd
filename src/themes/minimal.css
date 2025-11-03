@@ -1,0 +1,83 @@
+/*
+ * Thrynd Theme: Minimal
+ * Brutalist, monochrome design with stark contrasts
+ */
+
+body.theme-minimal,
+.theme-minimal {
+  /* Primary colors - Pure black */
+  --color-primary: #000;
+  --color-primary-hover: #1f2937;
+  --color-primary-active: #374151;
+  --color-primary-light: #f3f4f6;
+
+  /* Secondary colors - Gray */
+  --color-secondary: #6b7280;
+  --color-secondary-hover: #4b5563;
+  --color-secondary-active: #374151;
+  --color-secondary-light: #f9fafb;
+
+  /* Success - Dark green */
+  --color-success: #065f46;
+  --color-success-hover: #047857;
+  --color-success-light: #d1fae5;
+
+  /* Danger - Dark red */
+  --color-danger: #7f1d1d;
+  --color-danger-hover: #991b1b;
+  --color-danger-light: #fee2e2;
+
+  /* Warning - Dark yellow */
+  --color-warning: #78350f;
+  --color-warning-hover: #92400e;
+  --color-warning-light: #fef3c7;
+
+  /* Info - Dark gray */
+  --color-info: #374151;
+  --color-info-hover: #4b5563;
+  --color-info-light: #f3f4f6;
+
+  /* Background colors */
+  --color-background: #fff;
+  --color-surface: #fff;
+
+  /* Text colors */
+  --color-text: #000;
+  --color-text-secondary: #6b7280;
+  --color-heading: #000;
+
+  /* Border colors */
+  --color-border: #000;
+  --color-border-hover: #374151;
+
+  /* Link colors */
+  --color-link: #000;
+  --color-link-hover: #1f2937;
+
+  /* Component styling */
+  --card-background: #fff;
+  --card-border: #000;
+  --card-shadow: none;
+  --button-radius: var(--radius-none);
+  --card-radius: var(--radius-none);
+  --input-radius: var(--radius-none);
+
+  /* Typography */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+}
+
+/* Minimal theme specific adjustments */
+.theme-minimal {
+  border: 2px solid var(--color-border);
+}
+
+.theme-minimal .card {
+  border-width: 2px;
+}
+
+.theme-minimal button,
+.theme-minimal .btn,
+.theme-minimal [class^="btn-"] {
+  border: 2px solid var(--color-border);
+}

@@ -1,0 +1,206 @@
+/*
+ * Thrynd Tables
+ * Table component styles
+ */
+
+/* Base table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: var(--space-4);
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  background-color: var(--color-surface);
+  border-bottom-width: 2px;
+}
+
+.table tbody tr:hover {
+  background-color: var(--color-surface);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table variants */
+.table-bordered {
+  border: 1px solid var(--color-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--color-border);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--color-surface);
+}
+
+.table-striped tbody tr:hover {
+  background-color: var(--color-surface);
+  opacity: 0.8;
+}
+
+/* Table sizes */
+.table-sm th,
+.table-sm td {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.table-lg th,
+.table-lg td {
+  padding: var(--space-4) var(--space-6);
+}
+
+/* Responsive table */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+/* Table with cards (mobile-friendly alternative) */
+@media (max-width: 768px) {
+  .table-cards {
+    display: block;
+  }
+
+  .table-cards thead {
+    display: none;
+  }
+
+  .table-cards tbody,
+  .table-cards tr,
+  .table-cards td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-cards tr {
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    background-color: var(--color-background);
+  }
+
+  .table-cards td {
+    border: none;
+    padding: var(--space-2) 0;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table-cards td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 0;
+    font-weight: var(--font-weight-semibold);
+    text-align: left;
+  }
+}
+
+/* Table cell alignment */
+.table .text-center {
+  text-align: center;
+}
+
+.table .text-right {
+  text-align: right;
+}
+
+/* Table colors for rows */
+.table .table-primary {
+  background-color: var(--color-primary-light);
+}
+
+.table .table-success {
+  background-color: var(--color-success-light);
+}
+
+.table .table-danger {
+  background-color: var(--color-danger-light);
+}
+
+.table .table-warning {
+  background-color: var(--color-warning-light);
+}
+
+/* Table with actions column */
+.table .table-actions {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.table .table-actions .btn {
+  margin: 0 var(--space-1);
+}
+
+/* Sortable table headers */
+.table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: var(--space-6);
+}
+
+.table th.sortable:hover {
+  background-color: var(--color-gray-100);
+}
+
+.table th.sortable::after {
+  content: '↕';
+  position: absolute;
+  right: var(--space-3);
+  opacity: 0.3;
+}
+
+.table th.sortable.sort-asc::after {
+  content: '↑';
+  opacity: 1;
+}
+
+.table th.sortable.sort-desc::after {
+  content: '↓';
+  opacity: 1;
+}
+
+/* Table loading state */
+.table.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Empty table state */
+.table-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--color-text-secondary);
+}
+
+.table-empty-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-4);
+  opacity: 0.3;
+}

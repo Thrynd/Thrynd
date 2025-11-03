@@ -1,0 +1,80 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "comment-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "alpha-value-notation": "number",
+    "color-function-notation": null,
+    "import-notation": "string",
+    "keyframes-name-pattern": null,
+    "value-keyword-case": ["lower", {
+      "camelCaseSvgKeywords": true
+    }],
+    "number-max-precision": 6,
+    "media-feature-range-notation": "prefix",
+    "declaration-block-single-line-max-declarations": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "layer"
+        ]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+      }
+    ],
+    "max-nesting-depth": [
+      3,
+      {
+        "ignore": ["blockless-at-rules", "pseudo-classes"]
+      }
+    ],
+    "selector-max-compound-selectors": 4,
+    "selector-max-specificity": "0,4,0",
+    "color-hex-length": "short",
+    "length-zero-no-unit": true,
+    "shorthand-property-no-redundant-values": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "no-duplicate-selectors": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "no-invalid-position-at-import-rule": [
+      true,
+      {
+        "ignoreAtRules": ["layer"]
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "dist/**",
+    "node_modules/**",
+    "docs-site/**"
+  ]
+}

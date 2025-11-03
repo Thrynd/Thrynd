@@ -1,0 +1,118 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint:
+    name: Lint CSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run stylelint
+        run: npm run lint
+
+  build:
+    name: Build CSS
+    runs-on: ubuntu-latest
+    needs: lint
+
+    strategy:
+      matrix:
+        node-version: [16, 18, 20]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build:all
+
+      - name: Check file sizes
+        run: |
+          echo "=== File Sizes ==="
+          ls -lh dist/
+          echo ""
+          echo "=== Unminified CSS ==="
+          wc -c dist/thrynd.css
+          echo ""
+          echo "=== Minified CSS ==="
+          wc -c dist/thrynd.min.css
+          echo ""
+          echo "=== Gzipped Size ==="
+          gzip -c dist/thrynd.min.css | wc -c
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        if: matrix.node-version == 20
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+
+  size-check:
+    name: Size Check
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build:all
+
+      - name: Check bundle size
+        run: |
+          MINIFIED_SIZE=$(wc -c < dist/thrynd.min.css)
+          GZIP_SIZE=$(gzip -c dist/thrynd.min.css | wc -c)
+
+          echo "Minified size: $MINIFIED_SIZE bytes"
+          echo "Gzipped size: $GZIP_SIZE bytes"
+
+          # Fail if minified size exceeds 100KB
+          if [ $MINIFIED_SIZE -gt 102400 ]; then
+            echo "❌ Minified CSS exceeds 100KB limit"
+            exit 1
+          fi
+
+          # Fail if gzipped size exceeds 35KB
+          if [ $GZIP_SIZE -gt 35840 ]; then
+            echo "❌ Gzipped CSS exceeds 35KB limit"
+            exit 1
+          fi
+
+          echo "✅ Bundle size check passed"

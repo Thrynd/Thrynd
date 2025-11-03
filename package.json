@@ -1,0 +1,73 @@
+{
+  "name": "thrynd",
+  "version": "0.1.0",
+  "description": "A modern, opinionated CSS framework with beautiful pre-configured components, theme presets, and LLM-friendly documentation",
+  "main": "dist/thrynd.css",
+  "style": "dist/thrynd.css",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "postcss src/index.css -o dist/thrynd.css --watch",
+    "build": "postcss src/index.css -o dist/thrynd.css",
+    "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production",
+    "build:all": "npm run build && npm run build:min",
+    "lint": "stylelint \"src/**/*.css\"",
+    "lint:fix": "stylelint \"src/**/*.css\" --fix",
+    "test": "npm run lint",
+    "test:all": "npm run lint && npm run build:all",
+    "test:a11y": "node tests/accessibility/run-tests.js",
+    "test:a11y:ci": "pa11y-ci"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "design-system",
+    "ui-framework",
+    "themes",
+    "components",
+    "utilities",
+    "llm-friendly",
+    "ai-optimized",
+    "tailwind-alternative",
+    "bootstrap-alternative"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/thrynd.git"
+  },
+  "homepage": "https://thrynd.css",
+  "bugs": {
+    "url": "https://github.com/yourusername/thrynd/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "axe-core": "^4.8.3",
+    "axe-playwright": "^2.0.0",
+    "cssnano": "^6.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "pa11y": "^8.0.0",
+    "pa11y-ci": "^3.1.0",
+    "playwright": "^1.41.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+}

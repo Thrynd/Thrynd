@@ -1,0 +1,177 @@
+/*
+ * Thrynd Theme: Corporate
+ * Professional, trustworthy design with blue focus
+ */
+
+body.theme-corporate,
+.theme-corporate {
+  /* Primary colors - Corporate blue */
+  --color-primary: #06c;
+  --color-primary-hover: #0052a3;
+  --color-primary-active: #003d7a;
+  --color-primary-light: #cce5ff;
+
+  /* Secondary colors - Professional gray */
+  --color-secondary: #5a6c7d;
+  --color-secondary-hover: #465664;
+  --color-secondary-active: #33404b;
+  --color-secondary-light: #e8ecf0;
+
+  /* Success - Professional green */
+  --color-success: #00875a;
+  --color-success-hover: #064;
+  --color-success-light: #c1f0d6;
+
+  /* Danger - Corporate red */
+  --color-danger: #de350b;
+  --color-danger-hover: #bf2600;
+  --color-danger-light: #ffebe6;
+
+  /* Warning - Amber */
+  --color-warning: #ff8b00;
+  --color-warning-hover: #d97000;
+  --color-warning-light: #fff0d6;
+
+  /* Info - Light blue */
+  --color-info: #06c;
+  --color-info-hover: #0052a3;
+  --color-info-light: #cce5ff;
+
+  /* Background colors */
+  --color-background: #f5f7fa;
+  --color-surface: #fff;
+
+  /* Text colors */
+  --color-text: #172b4d;
+  --color-text-secondary: #5a6c7d;
+  --color-heading: #091e42;
+
+  /* Border colors */
+  --color-border: #dfe1e6;
+  --color-border-hover: #c1c7d0;
+
+  /* Link colors */
+  --color-link: #06c;
+  --color-link-hover: #0052a3;
+
+  /* Component styling */
+  --card-background: #fff;
+  --card-border: #dfe1e6;
+  --card-shadow: 0 1px 3px rgba(9, 30, 66, 0.12), 0 0 1px rgba(9, 30, 66, 0.1);
+  --button-radius: var(--radius-base);
+  --card-radius: var(--radius-base);
+  --input-radius: var(--radius-base);
+
+  /* Typography */
+  --font-body: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Corporate-specific styling */
+.theme-corporate {
+  background-color: var(--color-background);
+}
+
+.theme-corporate .navbar {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 3px rgba(9, 30, 66, 0.08);
+}
+
+.theme-corporate .navbar-primary {
+  background-color: var(--color-primary);
+  border-bottom-color: var(--color-primary-hover);
+  box-shadow: 0 1px 4px rgba(0, 102, 204, 0.3);
+}
+
+.theme-corporate .card-elevated {
+  box-shadow: 0 4px 8px rgba(9, 30, 66, 0.12), 0 0 2px rgba(9, 30, 66, 0.08);
+}
+
+.theme-corporate .card-elevated:hover {
+  box-shadow: 0 8px 16px rgba(9, 30, 66, 0.15), 0 0 4px rgba(9, 30, 66, 0.1);
+}
+
+.theme-corporate .btn-primary {
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+.theme-corporate .btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.theme-corporate .btn-secondary:hover {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-border-hover);
+}
+
+.theme-corporate h1,
+.theme-corporate h2,
+.theme-corporate h3,
+.theme-corporate h4,
+.theme-corporate h5,
+.theme-corporate h6 {
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+.theme-corporate .form-input {
+  border-width: 2px;
+}
+
+.theme-corporate .form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.theme-corporate .alert {
+  border-left-width: 4px;
+}
+
+.theme-corporate .badge {
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.6875rem;
+}
+
+.theme-corporate .table {
+  border: 1px solid var(--color-border);
+}
+
+.theme-corporate .table th {
+  background-color: var(--color-surface);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+/* Professional hover states */
+.theme-corporate a:hover {
+  text-decoration: underline;
+}
+
+.theme-corporate .card:hover {
+  border-color: var(--color-border-hover);
+}
+
+/* Sidebar styling for corporate apps */
+.theme-corporate .sidebar {
+  background-color: #fff;
+  border-right: 1px solid var(--color-border);
+  box-shadow: 1px 0 3px rgba(9, 30, 66, 0.08);
+}
+
+.theme-corporate .sidebar-nav .nav-item {
+  font-weight: var(--font-weight-medium);
+}
+
+.theme-corporate .sidebar-nav .nav-item.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}

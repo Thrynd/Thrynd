@@ -1,0 +1,15 @@
+# Build output
+dist/
+*.min.css
+
+# Dependencies
+node_modules/
+
+# Documentation site
+docs-site/
+
+# Examples
+docs/examples/
+
+# Config files
+*.config.js

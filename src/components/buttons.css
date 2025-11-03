@@ -1,0 +1,188 @@
+/*
+ * Thrynd Buttons
+ * Button component styles with variants
+ */
+
+/* Base button styles */
+button {
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--button-radius, var(--radius-md));
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  user-select: none;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button variants */
+.btn-primary,
+button.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover,
+button.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.btn-primary:active,
+button.btn-primary:active {
+  background-color: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+}
+
+.btn-secondary,
+button.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn-secondary:hover,
+button.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+  border-color: var(--color-secondary-hover);
+}
+
+.btn-secondary:active,
+button.btn-secondary:active {
+  background-color: var(--color-secondary-active);
+  border-color: var(--color-secondary-active);
+}
+
+.btn-danger,
+button.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  border: 1px solid var(--color-danger);
+}
+
+.btn-danger:hover,
+button.btn-danger:hover {
+  background-color: var(--color-danger-hover);
+  border-color: var(--color-danger-hover);
+}
+
+.btn-ghost,
+button.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover,
+button.btn-ghost:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+/* Button outline variants */
+.btn-outline,
+button.btn-outline {
+  background-color: transparent;
+  border-width: 1px;
+}
+
+.btn-primary.btn-outline {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary.btn-outline:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* Button sizes */
+.btn-sm,
+button.btn-sm {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.btn-lg,
+button.btn-lg {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-lg);
+}
+
+/* Button block (full width) */
+.btn-block,
+button.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+/* Button loading state */
+.btn-loading,
+button.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::before,
+button.btn-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: inherit;
+  z-index: 1;
+}
+
+.btn-loading::after,
+button.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.6s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Link styled as button */
+a.btn-primary,
+a.btn-secondary,
+a.btn-danger,
+a.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  border-radius: var(--button-radius, var(--radius-md));
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  user-select: none;
+  border: 1px solid transparent;
+}

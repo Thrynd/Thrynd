@@ -1,0 +1,22 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 10000,
+    "wait": 1000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    },
+    "runners": [
+      "axe"
+    ],
+    "ignore": []
+  },
+  "urls": [
+    {
+      "url": "tests/accessibility/test-page.html",
+      "actions": [
+        "wait for body to be visible"
+      ]
+    }
+  ]
+}

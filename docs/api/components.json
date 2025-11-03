@@ -1,0 +1,633 @@
+{
+  "version": "0.1.0",
+  "lastUpdated": "2025-11-02",
+  "framework": "Thrynd CSS",
+  "description": "LLM-friendly component catalog for AI-assisted development",
+  "components": {
+    "button": {
+      "name": "Button",
+      "category": "form",
+      "complexity": "simple",
+      "description": "Interactive button element for user actions and form submissions",
+      "baseClass": null,
+      "variants": {
+        "primary": {
+          "class": "btn-primary",
+          "usage": "Main call-to-action, most important action on page",
+          "example": "<button class=\"btn-primary\">Submit</button>",
+          "semantic": "Primary action - use once per section"
+        },
+        "secondary": {
+          "class": "btn-secondary",
+          "usage": "Alternative actions, cancel buttons, supporting actions",
+          "example": "<button class=\"btn-secondary\">Cancel</button>",
+          "semantic": "Secondary actions - can use multiple times"
+        },
+        "danger": {
+          "class": "btn-danger",
+          "usage": "Destructive actions (delete, remove, clear)",
+          "example": "<button class=\"btn-danger\">Delete</button>",
+          "semantic": "Warns user of destructive action"
+        },
+        "ghost": {
+          "class": "btn-ghost",
+          "usage": "Subtle actions in busy interfaces, tertiary actions",
+          "example": "<button class=\"btn-ghost\">Edit</button>",
+          "semantic": "Low-emphasis actions"
+        }
+      },
+      "sizes": {
+        "small": {
+          "class": "btn-sm",
+          "usage": "Compact UI, tables, inline actions",
+          "example": "<button class=\"btn-primary btn-sm\">Save</button>"
+        },
+        "medium": {
+          "class": null,
+          "usage": "Default size, most UI elements",
+          "example": "<button class=\"btn-primary\">Submit</button>",
+          "default": true
+        },
+        "large": {
+          "class": "btn-lg",
+          "usage": "Hero sections, landing pages, prominent CTAs",
+          "example": "<button class=\"btn-primary btn-lg\">Get Started</button>"
+        }
+      },
+      "modifiers": {
+        "outline": {
+          "class": "btn-outline",
+          "usage": "Hollow button with border only",
+          "example": "<button class=\"btn-primary btn-outline\">Outlined</button>",
+          "combines": ["Can combine with any variant"]
+        },
+        "block": {
+          "class": "btn-block",
+          "usage": "Full-width button",
+          "example": "<button class=\"btn-primary btn-block\">Full Width</button>",
+          "combines": ["Can combine with any variant or size"]
+        },
+        "loading": {
+          "class": "btn-loading",
+          "usage": "Shows loading spinner, use during async operations",
+          "example": "<button class=\"btn-primary btn-loading\">Loading...</button>",
+          "note": "Also add disabled attribute"
+        }
+      },
+      "states": {
+        "hover": {
+          "automatic": true,
+          "description": "Darker background on hover"
+        },
+        "disabled": {
+          "attribute": "disabled",
+          "example": "<button class=\"btn-primary\" disabled>Disabled</button>"
+        }
+      },
+      "accessibility": {
+        "required": [
+          "Accessible text content or aria-label",
+          "type=\"button\" or type=\"submit\" attribute"
+        ],
+        "keyboard": "Activated with Enter or Space",
+        "screenReader": "Button role implicit, ensure meaningful text"
+      },
+      "commonCombinations": [
+        {
+          "classes": "btn-primary btn-lg",
+          "usage": "Hero section CTA",
+          "context": "Landing pages, main conversion point"
+        },
+        {
+          "classes": "btn-secondary btn-sm",
+          "usage": "Table row action",
+          "context": "Data tables, compact interfaces"
+        },
+        {
+          "classes": "btn-primary btn-block",
+          "usage": "Form submit button",
+          "context": "Forms, especially mobile layouts"
+        }
+      ],
+      "antiPatterns": [
+        {
+          "wrong": "btn btn-primary",
+          "right": "btn-primary",
+          "reason": "Variant classes include base styles",
+          "severity": "error"
+        },
+        {
+          "wrong": "btn-primary btn-secondary",
+          "right": "btn-primary",
+          "reason": "Cannot use multiple variants",
+          "severity": "error"
+        },
+        {
+          "wrong": "<button class=\"btn-primary\"></button>",
+          "right": "<button class=\"btn-primary\">Click me</button>",
+          "reason": "Buttons must have text content",
+          "severity": "warning"
+        }
+      ],
+      "relatedComponents": ["link", "icon"],
+      "frameworks": {
+        "react": "import { Button } from '@thrynd/react'",
+        "vue": "import { Button } from '@thrynd/vue'",
+        "svelte": "import { Button } from '@thrynd/svelte'"
+      }
+    },
+    "card": {
+      "name": "Card",
+      "category": "layout",
+      "complexity": "simple",
+      "description": "Container that groups related information and actions into a cohesive unit",
+      "baseClass": "card",
+      "variants": {
+        "default": {
+          "class": "card",
+          "usage": "Standard card with subtle border",
+          "example": "<div class=\"card\"><div class=\"card-body\">Content</div></div>"
+        },
+        "elevated": {
+          "class": "card-elevated",
+          "usage": "Card with shadow that appears raised",
+          "example": "<div class=\"card-elevated\"><div class=\"card-body\">Content</div></div>"
+        },
+        "outlined": {
+          "class": "card-outlined",
+          "usage": "Card with prominent border, no shadow",
+          "example": "<div class=\"card-outlined\"><div class=\"card-body\">Content</div></div>"
+        }
+      },
+      "subComponents": {
+        "header": {
+          "class": "card-header",
+          "usage": "Top section for title and actions",
+          "example": "<div class=\"card-header\"><h3>Title</h3></div>"
+        },
+        "body": {
+          "class": "card-body",
+          "usage": "Main content area",
+          "example": "<div class=\"card-body\"><p>Content</p></div>",
+          "required": true
+        },
+        "footer": {
+          "class": "card-footer",
+          "usage": "Bottom section for actions or metadata",
+          "example": "<div class=\"card-footer\"><button>Action</button></div>"
+        },
+        "image": {
+          "class": "card-img",
+          "usage": "Full-width image at top",
+          "example": "<img src=\"...\" class=\"card-img\" alt=\"...\">"
+        },
+        "title": {
+          "class": "card-title",
+          "usage": "Card title styling",
+          "example": "<h3 class=\"card-title\">Title</h3>"
+        }
+      },
+      "accessibility": {
+        "semantic": "Use <article> for independent content cards",
+        "heading": "Include heading inside card for structure",
+        "clickable": "If card is clickable, wrap in <a> tag"
+      },
+      "commonCombinations": [
+        {
+          "pattern": "product-card",
+          "html": "<div class=\"card\"><img src=\"...\" class=\"card-img\" alt=\"...\"><div class=\"card-body\"><h3>Product</h3><p>$99</p><button class=\"btn-primary\">Buy</button></div></div>",
+          "usage": "E-commerce product listing"
+        },
+        {
+          "pattern": "profile-card",
+          "html": "<div class=\"card-elevated text-center\"><div class=\"card-body\"><img src=\"...\" class=\"avatar-lg\" alt=\"...\"><h3>Name</h3><p class=\"text-muted\">Title</p></div></div>",
+          "usage": "Team member profiles"
+        }
+      ],
+      "antiPatterns": [
+        {
+          "wrong": "card card-elevated",
+          "right": "card-elevated",
+          "reason": "Use only one variant",
+          "severity": "error"
+        }
+      ],
+      "relatedComponents": ["button", "badge", "image"],
+      "frameworks": {
+        "react": "import { Card } from '@thrynd/react'",
+        "vue": "import { Card } from '@thrynd/vue'",
+        "svelte": "import { Card } from '@thrynd/svelte'"
+      }
+    },
+    "alert": {
+      "name": "Alert",
+      "category": "feedback",
+      "complexity": "simple",
+      "description": "Display important messages, notifications, or feedback to users",
+      "baseClass": "alert",
+      "variants": {
+        "primary": {
+          "class": "alert-primary",
+          "usage": "General informational messages",
+          "example": "<div class=\"alert alert-primary\">Info message</div>"
+        },
+        "success": {
+          "class": "alert-success",
+          "usage": "Success confirmations, completed actions",
+          "example": "<div class=\"alert alert-success\">Success!</div>"
+        },
+        "danger": {
+          "class": "alert-danger",
+          "usage": "Errors, critical issues",
+          "example": "<div class=\"alert alert-danger\">Error occurred</div>"
+        },
+        "warning": {
+          "class": "alert-warning",
+          "usage": "Warnings, cautionary messages",
+          "example": "<div class=\"alert alert-warning\">Warning!</div>"
+        },
+        "info": {
+          "class": "alert-info",
+          "usage": "Helpful information, tips",
+          "example": "<div class=\"alert alert-info\">FYI: ...</div>"
+        }
+      },
+      "subComponents": {
+        "title": {
+          "class": "alert-title",
+          "usage": "Bold title for alert",
+          "example": "<strong class=\"alert-title\">Title</strong>"
+        },
+        "close": {
+          "class": "alert-close",
+          "usage": "Close button to dismiss alert",
+          "example": "<button class=\"alert-close\">&times;</button>"
+        }
+      },
+      "accessibility": {
+        "role": "Use role=\"alert\" for important messages",
+        "dismissible": "If closeable, ensure keyboard accessible"
+      },
+      "commonCombinations": [
+        {
+          "pattern": "dismissible-alert",
+          "html": "<div class=\"alert alert-success\"><button class=\"alert-close\">&times;</button><strong class=\"alert-title\">Success!</strong><p>Your changes were saved.</p></div>",
+          "usage": "Dismissible success message"
+        }
+      ],
+      "relatedComponents": ["toast", "badge"],
+      "frameworks": {
+        "react": "import { Alert } from '@thrynd/react'",
+        "vue": "import { Alert } from '@thrynd/vue'",
+        "svelte": "import { Alert } from '@thrynd/svelte'"
+      }
+    },
+    "badge": {
+      "name": "Badge",
+      "category": "feedback",
+      "complexity": "simple",
+      "description": "Small label to highlight status, counts, or categories",
+      "baseClass": "badge",
+      "variants": {
+        "primary": {
+          "class": "badge-primary",
+          "usage": "Primary status or category",
+          "example": "<span class=\"badge badge-primary\">New</span>"
+        },
+        "success": {
+          "class": "badge-success",
+          "usage": "Positive status, active states",
+          "example": "<span class=\"badge badge-success\">Active</span>"
+        },
+        "danger": {
+          "class": "badge-danger",
+          "usage": "Negative status, alerts",
+          "example": "<span class=\"badge badge-danger\">Error</span>"
+        },
+        "warning": {
+          "class": "badge-warning",
+          "usage": "Warning status, pending states",
+          "example": "<span class=\"badge badge-warning\">Pending</span>"
+        }
+      },
+      "modifiers": {
+        "outline": {
+          "class": "badge-outline",
+          "usage": "Hollow badge with border",
+          "example": "<span class=\"badge badge-primary badge-outline\">New</span>"
+        },
+        "pill": {
+          "class": "badge-pill",
+          "usage": "Fully rounded badge",
+          "example": "<span class=\"badge badge-primary badge-pill\">5</span>"
+        },
+        "large": {
+          "class": "badge-lg",
+          "usage": "Larger badge",
+          "example": "<span class=\"badge badge-lg badge-primary\">Featured</span>"
+        }
+      },
+      "commonCombinations": [
+        {
+          "pattern": "notification-count",
+          "html": "<button class=\"btn-ghost\">Messages <span class=\"badge badge-danger badge-pill\">12</span></button>",
+          "usage": "Notification counter"
+        }
+      ],
+      "relatedComponents": ["alert", "button"],
+      "frameworks": {
+        "react": "import { Badge } from '@thrynd/react'",
+        "vue": "import { Badge } from '@thrynd/vue'",
+        "svelte": "import { Badge } from '@thrynd/svelte'"
+      }
+    },
+    "form": {
+      "name": "Form Input",
+      "category": "form",
+      "complexity": "medium",
+      "description": "Form input elements for collecting user data",
+      "baseClass": "form-input",
+      "inputTypes": {
+        "text": {
+          "type": "text",
+          "usage": "Single-line text input",
+          "example": "<input type=\"text\" class=\"form-input\" placeholder=\"Name\">"
+        },
+        "email": {
+          "type": "email",
+          "usage": "Email address input",
+          "example": "<input type=\"email\" class=\"form-input\" placeholder=\"Email\">"
+        },
+        "password": {
+          "type": "password",
+          "usage": "Password input",
+          "example": "<input type=\"password\" class=\"form-input\" placeholder=\"Password\">"
+        },
+        "textarea": {
+          "element": "textarea",
+          "usage": "Multi-line text input",
+          "example": "<textarea class=\"form-input\" rows=\"5\"></textarea>"
+        },
+        "select": {
+          "element": "select",
+          "usage": "Dropdown selection",
+          "example": "<select class=\"form-input\"><option>Choose...</option></select>"
+        }
+      },
+      "structure": {
+        "group": {
+          "class": "form-group",
+          "usage": "Wraps label + input pair",
+          "example": "<div class=\"form-group\"><label>Name</label><input type=\"text\" class=\"form-input\"></div>",
+          "required": true
+        }
+      },
+      "states": {
+        "error": {
+          "class": "form-input-error",
+          "usage": "Show validation error",
+          "example": "<input type=\"email\" class=\"form-input form-input-error\">"
+        },
+        "success": {
+          "class": "form-input-success",
+          "usage": "Show validation success",
+          "example": "<input type=\"email\" class=\"form-input form-input-success\">"
+        }
+      },
+      "accessibility": {
+        "required": [
+          "Every input must have associated label with matching for/id",
+          "Use required attribute for required fields",
+          "Use appropriate input types"
+        ]
+      },
+      "commonCombinations": [
+        {
+          "pattern": "login-form",
+          "html": "<form><div class=\"form-group\"><label for=\"email\">Email</label><input type=\"email\" id=\"email\" class=\"form-input\" required></div><div class=\"form-group\"><label for=\"password\">Password</label><input type=\"password\" id=\"password\" class=\"form-input\" required></div><button type=\"submit\" class=\"btn-primary w-full\">Sign In</button></form>",
+          "usage": "Standard login form"
+        }
+      ],
+      "antiPatterns": [
+        {
+          "wrong": "<input type=\"text\">",
+          "right": "<label for=\"name\">Name</label><input type=\"text\" id=\"name\" class=\"form-input\">",
+          "reason": "Inputs must have labels",
+          "severity": "error"
+        }
+      ],
+      "relatedComponents": ["button", "label"],
+      "frameworks": {
+        "react": "import { Input, Form } from '@thrynd/react'",
+        "vue": "import { Input, FormGroup } from '@thrynd/vue'",
+        "svelte": "import { Input, FormGroup } from '@thrynd/svelte'"
+      }
+    },
+    "navbar": {
+      "name": "Navbar",
+      "category": "navigation",
+      "complexity": "medium",
+      "description": "Top navigation bar for site-wide navigation",
+      "baseClass": "navbar",
+      "subComponents": {
+        "brand": {
+          "class": "navbar-brand",
+          "usage": "Logo or site name",
+          "example": "<a href=\"#\" class=\"navbar-brand\">Brand</a>"
+        },
+        "nav": {
+          "class": "navbar-nav",
+          "usage": "Navigation links container",
+          "example": "<ul class=\"navbar-nav\"><li><a href=\"#\" class=\"navbar-link\">Link</a></li></ul>"
+        },
+        "link": {
+          "class": "navbar-link",
+          "usage": "Navigation link",
+          "example": "<a href=\"#\" class=\"navbar-link\">Home</a>"
+        }
+      },
+      "variants": {
+        "primary": {
+          "class": "navbar-primary",
+          "usage": "Colored background navbar",
+          "example": "<nav class=\"navbar navbar-primary\">...</nav>"
+        }
+      },
+      "accessibility": {
+        "semantic": "Use <nav> element",
+        "aria": "Add aria-label=\"Main navigation\""
+      },
+      "commonCombinations": [
+        {
+          "pattern": "standard-navbar",
+          "html": "<nav class=\"navbar\"><a href=\"#\" class=\"navbar-brand\">Site</a><ul class=\"navbar-nav\"><li><a href=\"#\" class=\"navbar-link active\">Home</a></li><li><a href=\"#\" class=\"navbar-link\">About</a></li></ul></nav>",
+          "usage": "Standard navigation bar"
+        }
+      ],
+      "relatedComponents": ["sidebar", "breadcrumb"],
+      "frameworks": {
+        "react": "import { Navbar } from '@thrynd/react'",
+        "vue": "import { Navbar } from '@thrynd/vue'",
+        "svelte": "import { Navbar } from '@thrynd/svelte'"
+      }
+    },
+    "modal": {
+      "name": "Modal",
+      "category": "overlay",
+      "complexity": "complex",
+      "description": "Dialog overlay for focused interactions",
+      "baseClass": "modal",
+      "structure": {
+        "modal": {
+          "class": "modal",
+          "usage": "Modal container (fixed overlay)",
+          "required": true
+        },
+        "dialog": {
+          "class": "modal-dialog",
+          "usage": "Dialog box itself",
+          "required": true
+        },
+        "header": {
+          "class": "modal-header",
+          "usage": "Header with title and close button"
+        },
+        "body": {
+          "class": "modal-body",
+          "usage": "Main content area",
+          "required": true
+        },
+        "footer": {
+          "class": "modal-footer",
+          "usage": "Action buttons"
+        },
+        "backdrop": {
+          "class": "modal-backdrop",
+          "usage": "Dark overlay behind modal",
+          "required": true
+        }
+      },
+      "sizes": {
+        "small": {
+          "class": "modal-dialog-sm",
+          "usage": "Small dialogs"
+        },
+        "large": {
+          "class": "modal-dialog-lg",
+          "usage": "Large content dialogs"
+        }
+      },
+      "accessibility": {
+        "required": [
+          "Use role=\"dialog\"",
+          "Add aria-labelledby pointing to title",
+          "Trap focus within modal when open",
+          "Close with Escape key"
+        ]
+      },
+      "commonCombinations": [
+        {
+          "pattern": "confirmation-modal",
+          "html": "<div class=\"modal\"><div class=\"modal-dialog\"><div class=\"modal-header\"><h3 class=\"modal-title\">Confirm</h3></div><div class=\"modal-body\"><p>Are you sure?</p></div><div class=\"modal-footer\"><button class=\"btn-secondary\">Cancel</button><button class=\"btn-danger\">Delete</button></div></div></div><div class=\"modal-backdrop\"></div>",
+          "usage": "Confirmation dialog"
+        }
+      ],
+      "relatedComponents": ["button", "backdrop"],
+      "frameworks": {
+        "react": "import { Modal } from '@thrynd/react'",
+        "vue": "import { Modal } from '@thrynd/vue'",
+        "svelte": "import { Modal } from '@thrynd/svelte'"
+      }
+    }
+  },
+  "utilities": {
+    "spacing": {
+      "margin": {
+        "prefix": "m",
+        "values": [0, 1, 2, 3, 4, 6, 8],
+        "directions": ["", "t", "r", "b", "l", "x", "y"],
+        "example": "m-4 applies margin: 1rem to all sides"
+      },
+      "padding": {
+        "prefix": "p",
+        "values": [0, 1, 2, 3, 4, 6, 8],
+        "directions": ["", "t", "r", "b", "l", "x", "y"],
+        "example": "p-4 applies padding: 1rem to all sides"
+      }
+    },
+    "colors": {
+      "text": {
+        "prefix": "text",
+        "values": ["primary", "secondary", "success", "danger", "warning", "muted"],
+        "example": "text-primary applies primary color to text"
+      },
+      "background": {
+        "prefix": "bg",
+        "values": ["primary", "secondary", "success", "danger", "white", "gray-50", "gray-100"],
+        "example": "bg-primary applies primary background color"
+      }
+    },
+    "layout": {
+      "display": {
+        "values": ["block", "inline-block", "flex", "grid", "hidden"],
+        "example": "flex makes element flexbox container"
+      },
+      "flexbox": {
+        "align": ["items-center", "items-start", "items-end"],
+        "justify": ["justify-center", "justify-between", "justify-around"],
+        "example": "flex items-center justify-between"
+      },
+      "grid": {
+        "columns": ["grid-cols-1", "grid-cols-2", "grid-cols-3", "grid-cols-4"],
+        "responsive": ["sm:grid-cols-2", "md:grid-cols-3", "lg:grid-cols-4"],
+        "gap": ["gap-2", "gap-4", "gap-6"],
+        "example": "grid grid-cols-3 gap-4"
+      }
+    },
+    "typography": {
+      "size": {
+        "values": ["text-xs", "text-sm", "text-base", "text-lg", "text-xl", "text-2xl", "text-3xl", "text-4xl"],
+        "example": "text-xl applies 1.25rem font size"
+      },
+      "weight": {
+        "values": ["font-normal", "font-medium", "font-semibold", "font-bold"],
+        "example": "font-bold applies bold weight"
+      },
+      "align": {
+        "values": ["text-left", "text-center", "text-right"],
+        "example": "text-center centers text"
+      }
+    }
+  },
+  "themes": {
+    "modern": {
+      "class": "theme-modern",
+      "description": "Clean, contemporary design with vibrant colors",
+      "colors": {
+        "primary": "#3b82f6",
+        "secondary": "#6b7280"
+      }
+    },
+    "classic": {
+      "class": "theme-classic",
+      "description": "Traditional, elegant with serif fonts",
+      "colors": {
+        "primary": "#1e3a8a",
+        "secondary": "#78716c"
+      },
+      "fonts": {
+        "body": "serif",
+        "heading": "serif"
+      }
+    },
+    "minimal": {
+      "class": "theme-minimal",
+      "description": "Brutalist, monochrome design",
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#6b7280"
+      },
+      "style": "brutalist"
+    }
+  }
+}

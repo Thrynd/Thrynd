@@ -1,0 +1,120 @@
+/*
+ * Thrynd Theme: Neon
+ * Cyberpunk, vibrant design with electric colors
+ */
+
+body.theme-neon,
+.theme-neon {
+  /* Primary colors - Electric blue/cyan (WCAG AA compliant) */
+  --color-primary: #00d4e6;
+  --color-primary-hover: #00b8cc;
+  --color-primary-active: #009cb3;
+  --color-primary-light: rgba(0, 240, 255, 0.1);
+
+  /* Secondary colors - Electric purple */
+  --color-secondary: #b026ff;
+  --color-secondary-hover: #9920e6;
+  --color-secondary-active: #8219cc;
+  --color-secondary-light: rgba(176, 38, 255, 0.1);
+
+  /* Success - Neon green */
+  --color-success: #39ff14;
+  --color-success-hover: #2ee60f;
+  --color-success-light: rgba(57, 255, 20, 0.1);
+
+  /* Danger - Hot pink (WCAG AA compliant) */
+  --color-danger: #cc005a;
+  --color-danger-hover: #b3004f;
+  --color-danger-light: rgba(255, 0, 110, 0.1);
+
+  /* Warning - Neon yellow */
+  --color-warning: #ff0;
+  --color-warning-hover: #e6e600;
+  --color-warning-light: rgba(255, 255, 0, 0.1);
+
+  /* Info - Neon blue (WCAG AA compliant) */
+  --color-info: #00d4e6;
+  --color-info-hover: #00b8cc;
+  --color-info-light: rgba(0, 240, 255, 0.1);
+
+  /* Background colors - Dark */
+  --color-background: #0a0a0a;
+  --color-surface: #1a1a1a;
+
+  /* Text colors - Light on dark */
+  --color-text: #fff;
+  --color-text-secondary: #a0a0a0;
+  --color-heading: #fff;
+
+  /* Border colors */
+  --color-border: #333;
+  --color-border-hover: #00f0ff;
+
+  /* Link colors (WCAG AA compliant) */
+  --color-link: #00d4e6;
+  --color-link-hover: #b026ff;
+
+  /* Component styling */
+  --card-background: #1a1a1a;
+  --card-border: #333;
+  --card-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  --button-radius: var(--radius-base);
+  --card-radius: var(--radius-md);
+  --input-radius: var(--radius-base);
+
+  /* Typography */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+}
+
+/* Neon-specific enhancements */
+.theme-neon {
+  background-color: var(--color-background);
+}
+
+.theme-neon .btn-primary {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.theme-neon .btn-primary:hover {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+}
+
+.theme-neon .btn-secondary {
+  box-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+}
+
+.theme-neon .btn-secondary:hover {
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.8);
+}
+
+.theme-neon .card-elevated {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.theme-neon .card-elevated:hover {
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.4);
+  border-color: rgba(0, 240, 255, 0.6);
+}
+
+.theme-neon h1,
+.theme-neon h2,
+.theme-neon h3 {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.theme-neon .navbar {
+  background-color: rgba(26, 26, 26, 0.95);
+  border-bottom-color: rgba(0, 240, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.theme-neon .form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.2), 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.theme-neon a:hover {
+  text-shadow: 0 0 8px currentColor;
+}

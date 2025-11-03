@@ -1,0 +1,46 @@
+# CODEOWNERS file for Thrynd CSS
+#
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, these users will be requested
+# for review when someone opens a pull request.
+#
+# Learn more about CODEOWNERS:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners (fallback for everything)
+* @thrynd/maintainers
+
+# Core CSS files
+/src/core/ @thrynd/core-team
+/src/themes/ @thrynd/design-team
+
+# Components
+/src/components/ @thrynd/component-team
+
+# Utilities
+/src/utilities/ @thrynd/utilities-team
+
+# Build configuration
+/postcss.config.js @thrynd/build-team
+/package.json @thrynd/build-team
+
+# Documentation
+/docs/ @thrynd/docs-team
+/docs-site/ @thrynd/docs-team
+README.md @thrynd/docs-team
+CONTRIBUTING.md @thrynd/docs-team
+
+# GitHub configuration
+/.github/ @thrynd/maintainers
+
+# Framework integrations
+/integrations/react/ @thrynd/react-team
+/integrations/vue/ @thrynd/vue-team
+/integrations/svelte/ @thrynd/svelte-team
+
+# Security
+SECURITY.md @thrynd/security-team
+
+# Testing
+/tests/ @thrynd/qa-team
+/.github/workflows/ @thrynd/qa-team @thrynd/build-team

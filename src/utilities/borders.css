@@ -1,0 +1,74 @@
+/*
+ * Thrynd Border Utilities
+ * Border width, style, and color utilities
+ */
+
+/* Border width */
+.border { border-width: 1px; border-style: solid; border-color: var(--color-border); }
+.border-0 { border-width: 0; }
+.border-2 { border-width: 2px; border-style: solid; border-color: var(--color-border); }
+.border-4 { border-width: 4px; border-style: solid; border-color: var(--color-border); }
+
+/* Border sides */
+.border-t { border-top: 1px solid var(--color-border); }
+.border-r { border-right: 1px solid var(--color-border); }
+.border-b { border-bottom: 1px solid var(--color-border); }
+.border-l { border-left: 1px solid var(--color-border); }
+
+/* Border colors */
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+.border-success { border-color: var(--color-success); }
+.border-danger { border-color: var(--color-danger); }
+.border-warning { border-color: var(--color-warning); }
+.border-gray-200 { border-color: var(--color-gray-200); }
+.border-gray-300 { border-color: var(--color-gray-300); }
+.border-transparent { border-color: transparent; }
+
+/* Border side colors */
+.border-t-transparent { border-top-color: transparent; }
+.border-r-transparent { border-right-color: transparent; }
+.border-b-transparent { border-bottom-color: transparent; }
+.border-l-transparent { border-left-color: transparent; }
+
+.border-t-primary { border-top-color: var(--color-primary); }
+.border-r-primary { border-right-color: var(--color-primary); }
+.border-b-primary { border-bottom-color: var(--color-primary); }
+.border-l-primary { border-left-color: var(--color-primary); }
+
+.border-t-success { border-top-color: var(--color-success); }
+.border-r-success { border-right-color: var(--color-success); }
+.border-b-success { border-bottom-color: var(--color-success); }
+.border-l-success { border-left-color: var(--color-success); }
+
+/* Border styles */
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-dotted { border-style: dotted; }
+.border-none { border-style: none; }
+
+/* Divide (for child elements) */
+.divide-y > * + * {
+  border-top: 1px solid var(--color-border);
+}
+
+.divide-x > * + * {
+  border-left: 1px solid var(--color-border);
+}
+
+/* Ring (outline) */
+.ring {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.ring-primary {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.ring-success {
+  box-shadow: 0 0 0 3px var(--color-success-light);
+}
+
+.ring-danger {
+  box-shadow: 0 0 0 3px var(--color-danger-light);
+}

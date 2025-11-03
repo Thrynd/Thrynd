@@ -1,0 +1,68 @@
+/*
+ * Thrynd Theme: Modern
+ * Clean, contemporary design with vibrant colors
+ */
+
+body.theme-modern,
+.theme-modern {
+  /* Primary colors - Vibrant blue (WCAG AA compliant) */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+  --color-primary-light: #dbeafe;
+
+  /* Secondary colors - Neutral gray */
+  --color-secondary: #6b7280;
+  --color-secondary-hover: #4b5563;
+  --color-secondary-active: #374151;
+  --color-secondary-light: #f3f4f6;
+
+  /* Success - Green (WCAG AA compliant) */
+  --color-success: #059669;
+  --color-success-hover: #047857;
+  --color-success-light: #d1fae5;
+
+  /* Danger - Red (WCAG AA compliant) */
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-light: #fee2e2;
+
+  /* Warning - Amber (WCAG AA compliant) */
+  --color-warning: #d97706;
+  --color-warning-hover: #b45309;
+  --color-warning-light: #fef3c7;
+
+  /* Info - Blue (WCAG AA compliant) */
+  --color-info: #2563eb;
+  --color-info-hover: #1d4ed8;
+  --color-info-light: #dbeafe;
+
+  /* Background colors */
+  --color-background: #fff;
+  --color-surface: #f9fafb;
+
+  /* Text colors */
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-heading: #111827;
+
+  /* Border colors */
+  --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
+
+  /* Link colors (WCAG AA compliant) */
+  --color-link: #2563eb;
+  --color-link-hover: #1d4ed8;
+
+  /* Component styling */
+  --card-background: #fff;
+  --card-border: #e5e7eb;
+  --card-shadow: var(--shadow-sm);
+  --button-radius: var(--radius-md);
+  --card-radius: var(--radius-lg);
+  --input-radius: var(--radius-md);
+
+  /* Typography */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+}

@@ -1,0 +1,123 @@
+/*
+ * Thrynd Theme: Nature
+ * Earthy, organic design with natural colors
+ */
+
+body.theme-nature,
+.theme-nature {
+  /* Primary colors - Forest green */
+  --color-primary: #2d6a4f;
+  --color-primary-hover: #245941;
+  --color-primary-active: #1b4332;
+  --color-primary-light: #d8f3dc;
+
+  /* Secondary colors - Earth brown */
+  --color-secondary: #8b7355;
+  --color-secondary-hover: #6f5c45;
+  --color-secondary-active: #534535;
+  --color-secondary-light: #e8dfd4;
+
+  /* Success - Leaf green */
+  --color-success: #52b788;
+  --color-success-hover: #40916c;
+  --color-success-light: #b7e4c7;
+
+  /* Danger - Terracotta */
+  --color-danger: #c1666b;
+  --color-danger-hover: #a45256;
+  --color-danger-light: #f4c2c2;
+
+  /* Warning - Autumn gold */
+  --color-warning: #d4a574;
+  --color-warning-hover: #b8885d;
+  --color-warning-light: #f4e4d4;
+
+  /* Info - Sky blue */
+  --color-info: #6096ba;
+  --color-info-hover: #4d7a9a;
+  --color-info-light: #d4e7f4;
+
+  /* Background colors - Natural */
+  --color-background: #fefae0;
+  --color-surface: #faedcd;
+
+  /* Text colors - Natural */
+  --color-text: #3a3a2c;
+  --color-text-secondary: #6b6b57;
+  --color-heading: #2d2d1f;
+
+  /* Border colors */
+  --color-border: #d4a373;
+  --color-border-hover: #b8885d;
+
+  /* Link colors */
+  --color-link: #2d6a4f;
+  --color-link-hover: #1b4332;
+
+  /* Component styling */
+  --card-background: #fff;
+  --card-border: #d4a373;
+  --card-shadow: 0 2px 8px rgba(139, 115, 85, 0.15);
+  --button-radius: var(--radius-lg);
+  --card-radius: var(--radius-xl);
+  --input-radius: var(--radius-lg);
+
+  /* Typography */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+}
+
+/* Nature-specific styling */
+.theme-nature {
+  background-color: var(--color-background);
+  background-image: linear-gradient(180deg, #fefae0 0%, #faedcd 100%);
+}
+
+.theme-nature .card {
+  border-width: 2px;
+}
+
+.theme-nature .card-elevated {
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+}
+
+.theme-nature .card-elevated:hover {
+  box-shadow: 0 6px 16px rgba(139, 115, 85, 0.3);
+}
+
+.theme-nature .btn-primary,
+.theme-nature .btn-secondary,
+.theme-nature .btn-success,
+.theme-nature .btn-danger {
+  font-weight: var(--font-weight-semibold);
+  text-transform: none;
+}
+
+.theme-nature .navbar {
+  background-color: rgba(250, 237, 205, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.theme-nature .form-input {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-nature .form-input:focus {
+  background-color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+}
+
+.theme-nature .badge {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Natural texture effect */
+.theme-nature::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a373' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+}

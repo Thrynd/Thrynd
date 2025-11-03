@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrynd Components Showcase</title>
+  <link rel="stylesheet" href="../../dist/thrynd.css">
+</head>
+<body class="theme-modern">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">Thrynd</a>
+    <ul class="navbar-nav">
+      <li><a href="#" class="navbar-link active">Components</a></li>
+      <li><a href="#" class="navbar-link">Documentation</a></li>
+      <li><a href="#" class="navbar-link">Examples</a></li>
+      <li><button class="btn-primary btn-sm">Get Started</button></li>
+    </ul>
+    <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="container py-8">
+    <!-- Page Header -->
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-2">Component Showcase</h1>
+      <p class="text-lg text-muted">Explore all available Thrynd components</p>
+
+      <!-- Breadcrumbs -->
+      <ul class="breadcrumb mt-4">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Examples</a></li>
+        <li class="breadcrumb-item active">Components</li>
+      </ul>
+    </header>
+
+    <!-- Alerts Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Alerts</h2>
+      <div class="alert alert-primary">
+        <strong class="alert-title">Primary Alert</strong>
+        <p>This is a primary alert with important information.</p>
+      </div>
+      <div class="alert alert-success">
+        <strong class="alert-title">Success!</strong>
+        <p>Your action was completed successfully.</p>
+      </div>
+      <div class="alert alert-warning">
+        <strong class="alert-title">Warning!</strong>
+        <p>Please review this information carefully.</p>
+      </div>
+      <div class="alert alert-danger">
+        <strong class="alert-title">Error!</strong>
+        <p>Something went wrong. Please try again.</p>
+      </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Badges</h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Solid Badges</h3>
+        <div class="badge-group">
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-secondary">Secondary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-info">Info</span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Outline Badges</h3>
+        <div class="badge-group">
+          <span class="badge badge-primary badge-outline">Primary</span>
+          <span class="badge badge-success badge-outline">Success</span>
+          <span class="badge badge-danger badge-outline">Danger</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Pill Badges</h3>
+        <div class="badge-group">
+          <span class="badge badge-primary badge-pill">New</span>
+          <span class="badge badge-success badge-pill">Active</span>
+          <span class="badge badge-danger badge-pill">12</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Bars Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Progress Bars</h2>
+      <div class="mb-4">
+        <p class="text-sm text-muted mb-2">Default Progress</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 60%">60%</div>
+        </div>
+      </div>
+      <div class="mb-4">
+        <p class="text-sm text-muted mb-2">Success Progress</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 80%">80%</div>
+        </div>
+      </div>
+      <div class="mb-4">
+        <p class="text-sm text-muted mb-2">Small Progress</p>
+        <div class="progress progress-sm">
+          <div class="progress-bar progress-bar-warning" style="width: 40%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spinners Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Spinners</h2>
+      <div class="flex gap-6 items-center">
+        <div>
+          <p class="text-sm text-muted mb-2">Small</p>
+          <div class="spinner spinner-sm"></div>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-2">Medium</p>
+          <div class="spinner"></div>
+        </div>
+        <div>
+          <p class="text-sm text-muted mb-2">Large</p>
+          <div class="spinner spinner-lg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Tabs</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab(event, 'tab1')">Tab 1</button>
+        <button class="tab" onclick="switchTab(event, 'tab2')">Tab 2</button>
+        <button class="tab" onclick="switchTab(event, 'tab3')">Tab 3</button>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div id="tab1" class="tab-content">
+            <h3 class="mb-2">Tab 1 Content</h3>
+            <p>This is the content for the first tab.</p>
+          </div>
+          <div id="tab2" class="tab-content hidden">
+            <h3 class="mb-2">Tab 2 Content</h3>
+            <p>This is the content for the second tab.</p>
+          </div>
+          <div id="tab3" class="tab-content hidden">
+            <h3 class="mb-2">Tab 3 Content</h3>
+            <p>This is the content for the third tab.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Pagination</h2>
+      <ul class="pagination">
+        <li><a href="#" class="pagination-item">«</a></li>
+        <li><a href="#" class="pagination-item">1</a></li>
+        <li><a href="#" class="pagination-item active">2</a></li>
+        <li><a href="#" class="pagination-item">3</a></li>
+        <li><a href="#" class="pagination-item">4</a></li>
+        <li><a href="#" class="pagination-item">5</a></li>
+        <li><a href="#" class="pagination-item">»</a></li>
+      </ul>
+    </section>
+
+    <!-- Dropdown Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Dropdown</h2>
+      <div class="dropdown">
+        <button class="btn-primary dropdown-toggle" onclick="toggleDropdown('dropdown1')">
+          Open Dropdown
+        </button>
+        <div id="dropdown1" class="dropdown-menu">
+          <a href="#" class="dropdown-item">Action</a>
+          <a href="#" class="dropdown-item">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">Separated link</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Modal</h2>
+      <button class="btn-primary" onclick="openModal('exampleModal')">Open Modal</button>
+    </section>
+
+    <!-- Tooltips Section -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Tooltips</h2>
+      <p>Hover over these elements to see tooltips:</p>
+      <div class="flex gap-4 mt-4">
+        <div class="tooltip">
+          <button class="btn-primary">Hover me</button>
+          <span class="tooltip-text">This is a tooltip!</span>
+        </div>
+        <div class="tooltip">
+          <button class="btn-secondary">Hover me too</button>
+          <span class="tooltip-text">Another tooltip</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Example Modal -->
+  <div id="exampleModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Example Modal</h3>
+        <button class="modal-close" onclick="closeModal('exampleModal')">×</button>
+      </div>
+      <div class="modal-body">
+        <p>This is an example modal dialog. You can put any content here.</p>
+        <p>Modals are perfect for focused interactions that require user attention.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('exampleModal')">Cancel</button>
+        <button class="btn-primary" onclick="closeModal('exampleModal')">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <div id="exampleModal-backdrop" class="modal-backdrop"></div>
+
+  <script>
+    // Modal functions
+    function openModal(id) {
+      document.getElementById(id).classList.add('show');
+      document.getElementById(id + '-backdrop').classList.add('show');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('show');
+      document.getElementById(id + '-backdrop').classList.remove('show');
+    }
+
+    // Dropdown function
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown-toggle')) {
+        var dropdowns = document.getElementsByClassName('dropdown-menu');
+        for (var i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].classList.remove('show');
+        }
+      }
+    }
+
+    // Tab switching
+    function switchTab(event, tabId) {
+      // Remove active class from all tabs
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Add active class to clicked tab
+      event.target.classList.add('active');
+
+      // Hide all tab content
+      var contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.add('hidden'));
+
+      // Show selected tab content
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.querySelector('.navbar-nav').classList.toggle('show');
+    }
+
+    // Close modal with backdrop click
+    document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+      backdrop.addEventListener('click', function() {
+        var modalId = this.id.replace('-backdrop', '');
+        closeModal(modalId);
+      });
+    });
+  </script>
+</body>
+</html>
