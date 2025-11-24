@@ -61,56 +61,54 @@ export default function Home() {
           backgroundSize: '50px 50px',
         }} />
 
-        <div className="container mx-auto px-6 py-16" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Hero Content */}
-            <div>
-              {/* Logo and Name */}
-              <div className="flex items-center gap-6 mb-8">
-                <Image
-                  src="/assets/thrynd.png"
-                  alt="Thrynd Logo"
-                  width={280}
-                  height={280}
-                  priority
-                  style={{
-                    filter: 'drop-shadow(0 8px 40px rgba(0,0,0,0.4))',
-                    maxWidth: '280px',
-                    height: 'auto',
-                  }}
-                />
-                <h1
-                  className="font-bold"
-                  style={{
-                    fontSize: 'clamp(64px, 10vw, 120px)',
-                    background: 'linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    filter: 'drop-shadow(0 4px 30px rgba(255,255,255,0.5))',
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  Thrynd
-                </h1>
-              </div>
+        <div className="container mx-auto px-6 py-20" style={{ position: 'relative', zIndex: 1 }}>
+          {/* Centered Logo and Brand Name */}
+          <div className="text-center mb-12">
+            <div className="flex flex-col items-center gap-6 mb-8">
+              <Image
+                src="/assets/thrynd.png"
+                alt="Thrynd Logo"
+                width={280}
+                height={280}
+                priority
+                style={{
+                  filter: 'drop-shadow(0 8px 40px rgba(0,0,0,0.4))',
+                  maxWidth: '280px',
+                  height: 'auto',
+                }}
+              />
+              <h1
+                className="font-bold"
+                style={{
+                  fontSize: 'clamp(64px, 12vw, 140px)',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0 4px 30px rgba(255,255,255,0.5))',
+                  letterSpacing: '-0.02em',
+                  lineHeight: '1',
+                }}
+              >
+                Thrynd
+              </h1>
+            </div>
 
-              <div className="flex gap-2 mb-6">
-                <span className="badge" style={{ background: 'rgba(255,255,255,0.2)', color: 'white', backdropFilter: 'blur(10px)' }}>v1.0</span>
-                <span className="badge" style={{ background: 'rgba(16, 185, 129, 0.9)', color: 'white' }}>&lt;10KB gzip</span>
-              </div>
+            <div className="flex gap-3 justify-center mb-8">
+              <span className="badge" style={{ background: 'rgba(255,255,255,0.2)', color: 'white', backdropFilter: 'blur(10px)', fontSize: '0.875rem', padding: '0.5rem 1rem' }}>v1.0</span>
+              <span className="badge" style={{ background: 'rgba(16, 185, 129, 0.9)', color: 'white', fontSize: '0.875rem', padding: '0.5rem 1rem' }}>&lt;10KB gzip</span>
+            </div>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: 'white' }}>
-                Beautiful defaults.<br/>
-                Zero config.
-              </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto" style={{ color: 'white' }}>
+              Beautiful defaults. Zero config.
+            </h2>
 
-              <p className="text-xl mb-8 leading-relaxed" style={{ color: 'rgba(255,255,255,0.95)' }}>
-                The CSS framework that respects your time. One link tag, instant beauty.
-                6 themes, 40+ components, and documentation designed for AI code generation.
-              </p>
+            <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto" style={{ color: 'rgba(255,255,255,0.95)' }}>
+              The CSS framework that respects your time. One link tag, instant beauty.
+              6 themes, 40+ components, and documentation designed for AI code generation.
+            </p>
 
-              <div className="flex gap-4 flex-wrap mb-8">
+            <div className="flex gap-4 flex-wrap justify-center mb-10">
                 <Link
                   href="/docs/getting-started"
                   className="btn-lg"
@@ -165,7 +163,7 @@ export default function Home() {
               </div>
 
               {/* Quick CDN Copy */}
-              <div className="card" style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <div className="card max-w-3xl mx-auto" style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="p-4">
                   <div className="text-xs mb-2" style={{ color: 'rgba(255,255,255,0.7)' }}>One line. That&apos;s it.</div>
                   <CodeBlock language="html">{'<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd/dist/thrynd.min.css">'}</CodeBlock>
@@ -173,17 +171,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right - Live Theme Demo */}
-            <div>
+            {/* Live Theme Demo - Full Width Below */}
+            <div className="mt-16 max-w-5xl mx-auto">
               <div className="card-elevated" style={{ overflow: 'hidden' }}>
                 <div className="p-4 border-b" style={{ borderColor: 'var(--color-border)', background: 'var(--color-gray-50)' }}>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2 flex-wrap justify-center">
                     {themes.map((theme, index) => (
                       <button
                         key={theme.class}
                         onClick={() => setActiveTheme(index)}
                         className={`btn-sm ${activeTheme === index ? 'btn-primary' : 'btn-ghost'}`}
-                        style={{ fontSize: '0.75rem' }}
                       >
                         {theme.name}
                       </button>
@@ -191,24 +188,44 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={themes[activeTheme].class} style={{ padding: '1.5rem', background: 'var(--color-surface, white)' }}>
-                  <div className="mb-4">
-                    <h3 className="font-bold mb-2">Live Preview</h3>
+                <div className={themes[activeTheme].class} style={{ padding: '2rem', background: 'var(--color-surface, white)' }}>
+                  <div className="text-center mb-6">
+                    <h3 className="font-bold text-xl mb-2">Live Theme Preview</h3>
                     <p className="text-sm text-muted">Click themes above to see instant changes</p>
                   </div>
 
-                  <div className="flex gap-2 mb-4">
-                    <button className="btn-primary btn-sm">Primary</button>
-                    <button className="btn-secondary btn-sm">Secondary</button>
-                    <button className="btn-ghost btn-sm">Ghost</button>
-                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div>
+                      <h4 className="font-semibold mb-3">Buttons</h4>
+                      <div className="flex gap-2 flex-wrap mb-4">
+                        <button className="btn-primary btn-sm">Primary</button>
+                        <button className="btn-secondary btn-sm">Secondary</button>
+                        <button className="btn-ghost btn-sm">Ghost</button>
+                      </div>
+                    </div>
 
-                  <div className="alert alert-success mb-4">
-                    <strong>Theme:</strong> {themes[activeTheme].name} - {themes[activeTheme].description}
-                  </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Alert</h4>
+                      <div className="alert alert-success">
+                        <strong>Theme:</strong> {themes[activeTheme].name} - {themes[activeTheme].description}
+                      </div>
+                    </div>
 
-                  <div className="form-group mb-0">
-                    <input type="email" className="form-input" placeholder="email@example.com" />
+                    <div>
+                      <h4 className="font-semibold mb-3">Form Input</h4>
+                      <div className="form-group mb-0">
+                        <input type="email" className="form-input" placeholder="email@example.com" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-3">Badges</h4>
+                      <div className="flex gap-2 flex-wrap">
+                        <span className="badge badge-primary">New</span>
+                        <span className="badge badge-success">Active</span>
+                        <span className="badge badge-warning">Beta</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
