@@ -417,8 +417,8 @@ export default function DashboardTemplatePage() {
         </div>
 
         <div className="card">
-          <div class Name="card-body">
-            <h4 className="font-semibold mb-3">📊 Statistics Cards</h4>
+          <div className="card-body">
+            <h4 className="font-semibold mb-3">Statistics Cards</h4>
             <p className="text-sm text-muted">
               Display key metrics with trend indicators. Easy to customize colors and icons.
             </p>
