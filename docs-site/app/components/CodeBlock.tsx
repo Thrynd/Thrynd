@@ -24,7 +24,7 @@ export function CodeBlock({ children, language = 'html', showCopy = true }: Code
   }
 
   return (
-    <div className="code-block" style={{ margin: '1rem 0', position: 'relative' }}>
+    <div className="code-block" style={{ margin: '1rem 0', position: 'relative', overflow: 'hidden' }}>
       {showCopy && (
         <button
           onClick={handleCopy}
@@ -52,21 +52,22 @@ export function CodeBlock({ children, language = 'html', showCopy = true }: Code
           {copied ? 'Copied!' : 'Copy'}
         </button>
       )}
-      <SyntaxHighlighter
-        language={language}
-        style={vscDarkPlus}
-        customStyle={{
-          margin: 0,
-          borderRadius: 'var(--radius-md)',
-          fontSize: '0.875rem',
-          lineHeight: '1.6',
-          paddingRight: showCopy ? '5rem' : undefined,
-          overflowX: 'auto',
-        }}
-        wrapLongLines={true}
-      >
-        {children}
-      </SyntaxHighlighter>
+      <div style={{ overflowX: 'auto', maxWidth: '100%' }}>
+        <SyntaxHighlighter
+          language={language}
+          style={vscDarkPlus}
+          customStyle={{
+            margin: 0,
+            borderRadius: 'var(--radius-md)',
+            fontSize: '0.875rem',
+            lineHeight: '1.6',
+            paddingRight: showCopy ? '5rem' : undefined,
+          }}
+          wrapLongLines={true}
+        >
+          {children}
+        </SyntaxHighlighter>
+      </div>
     </div>
   )
 }

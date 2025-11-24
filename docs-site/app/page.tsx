@@ -28,42 +28,133 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section with Live Theme Demo */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-        <div className="container mx-auto px-6 py-16">
+      <section
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Textured Background Pattern */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%),
+            linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05)),
+            linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05))
+          `,
+          backgroundSize: '100% 100%, 100% 100%, 40px 40px, 40px 40px',
+          backgroundPosition: '0 0, 0 0, 0 0, 20px 20px',
+          opacity: 0.3,
+        }} />
+
+        {/* Grid Pattern */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
+        }} />
+
+        <div className="container mx-auto px-6 py-16" style={{ position: 'relative', zIndex: 1 }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left - Hero Content */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <Image src="/assets/thrynd.png" alt="Thrynd Logo" width={48} height={48} priority />
-                <div className="flex gap-2">
-                  <span className="badge badge-primary">v1.0</span>
-                  <span className="badge" style={{ background: '#10b981', color: 'white' }}>&lt;10KB gzip</span>
-                </div>
+              {/* Logo and Name */}
+              <div className="flex items-center gap-4 mb-8">
+                <Image src="/assets/thrynd.png" alt="Thrynd Logo" width={80} height={80} priority style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.3))' }} />
+                <h1
+                  className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                  style={{
+                    background: 'linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textShadow: '0 2px 40px rgba(255,255,255,0.3)',
+                  }}
+                >
+                  Thrynd
+                </h1>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Beautiful defaults.<br/>
-                <span style={{ color: 'var(--color-primary)' }}>Zero config.</span>
-              </h1>
+              <div className="flex gap-2 mb-6">
+                <span className="badge" style={{ background: 'rgba(255,255,255,0.2)', color: 'white', backdropFilter: 'blur(10px)' }}>v1.0</span>
+                <span className="badge" style={{ background: 'rgba(16, 185, 129, 0.9)', color: 'white' }}>&lt;10KB gzip</span>
+              </div>
 
-              <p className="text-xl text-muted mb-8 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{ color: 'white' }}>
+                Beautiful defaults.<br/>
+                Zero config.
+              </h2>
+
+              <p className="text-xl mb-8 leading-relaxed" style={{ color: 'rgba(255,255,255,0.95)' }}>
                 The CSS framework that respects your time. One link tag, instant beauty.
                 6 themes, 40+ components, and documentation designed for AI code generation.
               </p>
 
               <div className="flex gap-4 flex-wrap mb-8">
-                <Link href="/docs/getting-started" className="btn-primary btn-lg">
+                <Link
+                  href="/docs/getting-started"
+                  className="btn-lg"
+                  style={{
+                    background: 'white',
+                    color: '#667eea',
+                    fontWeight: 'bold',
+                    padding: '1rem 2rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+                    transition: 'all 0.3s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                    e.currentTarget.style.boxShadow = '0 6px 30px rgba(0,0,0,0.3)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)'
+                  }}
+                >
                   Get Started Free
                 </Link>
-                <Link href="/playground" className="btn-ghost btn-lg">
+                <Link
+                  href="/playground"
+                  className="btn-lg"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    color: 'white',
+                    fontWeight: 'bold',
+                    padding: '1rem 2rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    border: '2px solid rgba(255,255,255,0.3)',
+                    backdropFilter: 'blur(10px)',
+                    transition: 'all 0.3s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.2)'
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)'
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'
+                  }}
+                >
                   Try Playground
                 </Link>
               </div>
 
               {/* Quick CDN Copy */}
-              <div className="card" style={{ background: '#1e1e1e' }}>
+              <div className="card" style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="p-4">
-                  <div className="text-xs text-gray-400 mb-2">One line. That&apos;s it.</div>
+                  <div className="text-xs mb-2" style={{ color: 'rgba(255,255,255,0.7)' }}>One line. That&apos;s it.</div>
                   <CodeBlock language="html">{'<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd/dist/thrynd.min.css">'}</CodeBlock>
                 </div>
               </div>
@@ -118,20 +209,20 @@ export default function Home() {
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
-              <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>6</div>
-              <div className="text-sm text-muted">Complete Themes</div>
+              <div className="text-3xl font-bold" style={{ color: 'white' }}>6</div>
+              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Complete Themes</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>40+</div>
-              <div className="text-sm text-muted">Components</div>
+              <div className="text-3xl font-bold" style={{ color: 'white' }}>40+</div>
+              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Components</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>&lt;10KB</div>
-              <div className="text-sm text-muted">Gzipped</div>
+              <div className="text-3xl font-bold" style={{ color: 'white' }}>&lt;10KB</div>
+              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Gzipped</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold" style={{ color: 'var(--color-primary)' }}>0</div>
-              <div className="text-sm text-muted">Build Config</div>
+              <div className="text-3xl font-bold" style={{ color: 'white' }}>0</div>
+              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>Build Config</div>
             </div>
           </div>
         </div>
