@@ -11,7 +11,9 @@ interface ComponentPreviewProps {
 }
 
 export function ComponentPreview({ children, code, title, language = 'html' }: ComponentPreviewProps) {
-  const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview')
+  // Default to 'code' tab if there's no preview content
+  const hasPreview = children !== undefined && children !== null
+  const [activeTab, setActiveTab] = useState<'preview' | 'code'>(hasPreview ? 'preview' : 'code')
 
   return (
     <div className="preview-container">
@@ -21,22 +23,24 @@ export function ComponentPreview({ children, code, title, language = 'html' }: C
         </div>
       )}
 
-      <div className="preview-tabs">
-        <button
-          className={`preview-tab ${activeTab === 'preview' ? 'active' : ''}`}
-          onClick={() => setActiveTab('preview')}
-        >
-          Preview
-        </button>
-        <button
-          className={`preview-tab ${activeTab === 'code' ? 'active' : ''}`}
-          onClick={() => setActiveTab('code')}
-        >
-          Code
-        </button>
-      </div>
+      {hasPreview && (
+        <div className="preview-tabs">
+          <button
+            className={`preview-tab ${activeTab === 'preview' ? 'active' : ''}`}
+            onClick={() => setActiveTab('preview')}
+          >
+            Preview
+          </button>
+          <button
+            className={`preview-tab ${activeTab === 'code' ? 'active' : ''}`}
+            onClick={() => setActiveTab('code')}
+          >
+            Code
+          </button>
+        </div>
+      )}
 
-      {activeTab === 'preview' ? (
+      {activeTab === 'preview' && hasPreview ? (
         <div className="preview-content">
           {children}
         </div>

@@ -377,26 +377,25 @@ export default function Playground() {
             <h3 className="font-semibold">HTML Code</h3>
             <p className="text-sm text-muted">Edit your code here - changes preview live</p>
           </div>
-          <div style={{ flex: 1, overflow: 'auto' }}>
-            <textarea
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              spellCheck={false}
-              style={{
-                width: '100%',
-                height: '100%',
-                padding: '1rem',
-                border: 'none',
-                fontFamily: 'monospace',
-                fontSize: '14px',
-                lineHeight: '1.6',
-                resize: 'none',
-                outline: 'none',
-                background: 'var(--color-gray-900)',
-                color: 'var(--color-gray-100)',
-              }}
-            />
-          </div>
+          <textarea
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            spellCheck={false}
+            style={{
+              width: '100%',
+              flex: 1,
+              padding: '1rem',
+              border: 'none',
+              fontFamily: 'monospace',
+              fontSize: '14px',
+              lineHeight: '1.6',
+              resize: 'none',
+              outline: 'none',
+              background: '#1e1e1e',
+              color: '#d4d4d4',
+              overflow: 'auto',
+            }}
+          />
         </div>
 
         {/* Preview */}

@@ -61,7 +61,9 @@ export function CodeBlock({ children, language = 'html', showCopy = true }: Code
           fontSize: '0.875rem',
           lineHeight: '1.6',
           paddingRight: showCopy ? '5rem' : undefined,
+          overflowX: 'auto',
         }}
+        wrapLongLines={true}
       >
         {children}
       </SyntaxHighlighter>
