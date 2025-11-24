@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { CodeBlock } from '../../components/CodeBlock'
 
 const themes = [
   {
@@ -112,8 +113,7 @@ export default function ThemesPage() {
         Apply a theme by adding the theme class to your <code>&lt;body&gt;</code> tag:
       </p>
 
-      <div className="code-block mb-8">
-        <pre><code>{`<!DOCTYPE html>
+      <CodeBlock language="html">{`<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
@@ -123,16 +123,14 @@ export default function ThemesPage() {
     <h1>Hello Thrynd!</h1>
   </div>
 </body>
-</html>`}</code></pre>
-      </div>
+</html>`}</CodeBlock>
 
       <h2>Dynamic Theme Switching</h2>
       <p className="mb-4">
         Switch themes dynamically with JavaScript:
       </p>
 
-      <div className="code-block mb-8">
-        <pre><code>{`// Switch to neon theme
+      <CodeBlock language="javascript">{`// Switch to neon theme
 document.body.className = 'theme-neon';
 
 // Save user preference
@@ -140,8 +138,7 @@ localStorage.setItem('theme', 'theme-neon');
 
 // Load saved theme on page load
 const savedTheme = localStorage.getItem('theme') || 'theme-modern';
-document.body.className = savedTheme;`}</code></pre>
-      </div>
+document.body.className = savedTheme;`}</CodeBlock>
 
       <h2>Theme Characteristics</h2>
       <p className="mb-6">
