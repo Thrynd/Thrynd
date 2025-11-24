@@ -1,4 +1,10 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Components',
+  description: 'Explore 40+ production-ready UI components including buttons, forms, cards, modals, alerts, and more. All components work across all 6 themes.',
+}
 
 export default function ComponentsOverview() {
   const components = [
@@ -65,7 +71,7 @@ export default function ComponentsOverview() {
       ))}
 
       <div className="alert alert-primary mt-12">
-        <strong>🤖 LLM-Friendly:</strong> All components are documented with machine-readable schemas. Check out the <Link href="/docs/llm-guide" className="font-semibold underline">LLM Guide</Link> to learn how AI assistants can generate perfect Thrynd code.
+        <strong>LLM-Friendly:</strong> All components are documented with machine-readable schemas. Check out the <Link href="/docs/llm-guide" className="font-semibold underline">LLM Guide</Link> to learn how AI assistants can generate perfect Thrynd code.
       </div>
     </div>
   )

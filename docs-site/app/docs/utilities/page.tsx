@@ -1,4 +1,10 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Utilities',
+  description: 'Comprehensive utility classes for spacing, colors, typography, layout, borders, and more. Tailwind-like utilities with responsive variants.',
+}
 
 export default function UtilitiesOverview() {
   const utilities = [

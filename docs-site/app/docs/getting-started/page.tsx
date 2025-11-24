@@ -1,4 +1,11 @@
+import { Metadata } from 'next'
 import { ComponentPreview } from '../../components/ComponentPreview'
+import { CodeBlock } from '../../components/CodeBlock'
+
+export const metadata: Metadata = {
+  title: 'Getting Started',
+  description: 'Get up and running with Thrynd CSS in minutes. Installation guides for CDN, NPM, and popular frameworks like React, Vue, and Svelte.',
+}
 
 export default function GettingStarted() {
   return (
@@ -15,8 +22,7 @@ export default function GettingStarted() {
         The quickest way to try Thrynd is via CDN. Add this to your HTML <code>&lt;head&gt;</code>:
       </p>
 
-      <div className="code-block">
-        <pre><code>{`<!DOCTYPE html>
+      <CodeBlock language="html">{`<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
@@ -27,26 +33,21 @@ export default function GettingStarted() {
     <button class="btn-primary">Click me</button>
   </div>
 </body>
-</html>`}</code></pre>
-      </div>
+</html>`}</CodeBlock>
 
       <h3 className="text-lg font-semibold mt-8 mb-3">NPM</h3>
       <p className="mb-4">
         For production projects, install Thrynd via NPM:
       </p>
 
-      <div className="code-block">
-        <pre><code>npm install thrynd</code></pre>
-      </div>
+      <CodeBlock language="bash">npm install thrynd</CodeBlock>
 
       <p className="mt-4 mb-4">
         Then import it in your CSS file:
       </p>
 
-      <div className="code-block">
-        <pre><code>{`/* In your main CSS file */
-@import 'thrynd';`}</code></pre>
-      </div>
+      <CodeBlock language="css">{`/* In your main CSS file */
+@import 'thrynd';`}</CodeBlock>
 
       <h2 className="mt-12">First Component</h2>
       <p className="mb-4">
@@ -83,8 +84,7 @@ export default function GettingStarted() {
         Thrynd comes with 6 pre-configured themes. Switch themes by changing the <code>class</code> on your <code>&lt;body&gt;</code> tag:
       </p>
 
-      <div className="code-block mb-6">
-        <pre><code>{`<!-- Modern (default) -->
+      <CodeBlock language="html">{`<!-- Modern (default) -->
 <body class="theme-modern">
 
 <!-- Classic - Traditional, elegant -->
@@ -100,11 +100,10 @@ export default function GettingStarted() {
 <body class="theme-nature">
 
 <!-- Corporate - Professional -->
-<body class="theme-corporate">`}</code></pre>
-      </div>
+<body class="theme-corporate">`}</CodeBlock>
 
-      <div className="alert alert-primary">
-        <strong>💡 Pro Tip:</strong> Try switching themes using the theme switcher in the top navigation bar to see all themes in action!
+      <div className="alert alert-primary mt-6">
+        <strong>Pro Tip:</strong> Try switching themes using the theme switcher in the top navigation bar to see all themes in action!
       </div>
 
       <h2 className="mt-12">Progressive Enhancement</h2>
@@ -150,8 +149,7 @@ export default function GettingStarted() {
       </p>
 
       <h3 className="text-lg font-semibold mt-6 mb-3">React</h3>
-      <div className="code-block">
-        <pre><code>{`import 'thrynd/dist/thrynd.css'
+      <CodeBlock language="jsx">{`import 'thrynd/dist/thrynd.css'
 
 function App() {
   return (
@@ -160,12 +158,10 @@ function App() {
       <button className="btn-primary">Click me</button>
     </div>
   )
-}`}</code></pre>
-      </div>
+}`}</CodeBlock>
 
       <h3 className="text-lg font-semibold mt-6 mb-3">Vue</h3>
-      <div className="code-block">
-        <pre><code>{`<!-- In main.js or App.vue -->
+      <CodeBlock language="html">{`<!-- In main.js or App.vue -->
 import 'thrynd/dist/thrynd.css'
 
 <template>
@@ -173,12 +169,10 @@ import 'thrynd/dist/thrynd.css'
     <h1>Hello from Vue!</h1>
     <button class="btn-primary">Click me</button>
   </div>
-</template>`}</code></pre>
-      </div>
+</template>`}</CodeBlock>
 
       <h3 className="text-lg font-semibold mt-6 mb-3">Svelte</h3>
-      <div className="code-block">
-        <pre><code>{`<!-- In App.svelte -->
+      <CodeBlock language="html">{`<!-- In App.svelte -->
 <svelte:head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
 </svelte:head>
@@ -186,11 +180,10 @@ import 'thrynd/dist/thrynd.css'
 <div class="container">
   <h1>Hello from Svelte!</h1>
   <button class="btn-primary">Click me</button>
-</div>`}</code></pre>
-      </div>
+</div>`}</CodeBlock>
 
       <div className="alert alert-success mt-8">
-        <strong>🎉 You're all set!</strong> Continue to the <a href="/docs/components" className="font-semibold underline">Components</a> section to explore all available components.
+        <strong>You're all set!</strong> Continue to the <a href="/docs/components" className="font-semibold underline">Components</a> section to explore all available components.
       </div>
 
       <div className="mt-12 pt-8" style={{ borderTop: '1px solid var(--color-border)' }}>
