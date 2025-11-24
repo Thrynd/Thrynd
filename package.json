@@ -14,12 +14,14 @@
     "build": "postcss src/index.css -o dist/thrynd.css",
     "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production",
     "build:all": "npm run build && npm run build:min",
+    "build:docs": "node scripts/generate-docs.js",
     "lint": "stylelint \"src/**/*.css\"",
     "lint:fix": "stylelint \"src/**/*.css\" --fix",
     "test": "npm run lint",
     "test:all": "npm run lint && npm run build:all",
     "test:a11y": "node tests/accessibility/run-tests.js",
-    "test:a11y:ci": "pa11y-ci"
+    "test:a11y:ci": "pa11y-ci",
+    "prepublishOnly": "npm run build:all && npm run build:docs"
   },
   "keywords": [
     "css",

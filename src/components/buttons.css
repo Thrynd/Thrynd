@@ -3,6 +3,157 @@
  * Button component styles with variants
  */
 
+/**
+ * @thrynd component button
+ * @description Interactive button element for user actions and form submissions
+ * @category form
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent button
+ * @class btn-primary
+ * @usage Main call-to-action, most important action on page
+ * @example <button class="btn-primary">Submit</button>
+ * @semantic Primary action - use once per section
+ */
+
+/**
+ * @thrynd variant secondary
+ * @parent button
+ * @class btn-secondary
+ * @usage Alternative actions, cancel buttons, supporting actions
+ * @example <button class="btn-secondary">Cancel</button>
+ * @semantic Secondary actions - can use multiple times
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent button
+ * @class btn-danger
+ * @usage Destructive actions (delete, remove, clear)
+ * @example <button class="btn-danger">Delete</button>
+ * @semantic Warns user of destructive action
+ */
+
+/**
+ * @thrynd variant ghost
+ * @parent button
+ * @class btn-ghost
+ * @usage Subtle actions in busy interfaces, tertiary actions
+ * @example <button class="btn-ghost">Edit</button>
+ * @semantic Low-emphasis actions
+ */
+
+/**
+ * @thrynd size small
+ * @parent button
+ * @class btn-sm
+ * @usage Compact UI, tables, inline actions
+ * @example <button class="btn-primary btn-sm">Save</button>
+ */
+
+/**
+ * @thrynd size medium
+ * @parent button
+ * @class null
+ * @usage Default size, most UI elements
+ * @example <button class="btn-primary">Submit</button>
+ * @default true
+ */
+
+/**
+ * @thrynd size large
+ * @parent button
+ * @class btn-lg
+ * @usage Hero sections, landing pages, prominent CTAs
+ * @example <button class="btn-primary btn-lg">Get Started</button>
+ */
+
+/**
+ * @thrynd modifier outline
+ * @parent button
+ * @class btn-outline
+ * @usage Hollow button with border only
+ * @example <button class="btn-primary btn-outline">Outlined</button>
+ * @combines Can combine with any variant
+ */
+
+/**
+ * @thrynd modifier block
+ * @parent button
+ * @class btn-block
+ * @usage Full-width button
+ * @example <button class="btn-primary btn-block">Full Width</button>
+ * @combines Can combine with any variant or size
+ */
+
+/**
+ * @thrynd modifier loading
+ * @parent button
+ * @class btn-loading
+ * @usage Shows loading spinner during async operations
+ * @example <button class="btn-primary btn-loading" disabled>Loading...</button>
+ * @combines Add disabled attribute when loading
+ */
+
+/**
+ * @thrynd state hover
+ * @parent button
+ * @automatic true
+ * @description Darker background on hover
+ */
+
+/**
+ * @thrynd state disabled
+ * @parent button
+ * @attribute disabled
+ * @example <button class="btn-primary" disabled>Disabled</button>
+ * @description Reduced opacity and no pointer events
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent button
+ * @keyboard Activated with Enter or Space
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent button
+ * @screenReader Button role implicit, ensure meaningful text
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent button
+ * @required Accessible text content or aria-label
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent button
+ * @required type="button" or type="submit" attribute
+ */
+
+/**
+ * @thrynd combination heroCTA
+ * @parent button
+ * @classes btn-primary btn-lg
+ * @usage Hero section CTA
+ * @context Landing pages, main conversion point
+ */
+
+/**
+ * @thrynd antipattern multipleVariants
+ * @parent button
+ * @pattern Using multiple variants (btn-primary btn-secondary)
+ * @reason Only one variant should be applied
+ * @severity error
+ * @suggestion Choose one variant based on the action's importance
+ */
+
 /* Base button styles */
 button {
   font-family: inherit;
