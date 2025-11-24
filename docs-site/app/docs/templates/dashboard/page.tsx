@@ -197,7 +197,7 @@ export default function DashboardTemplatePage() {
           <div class="stat-card">
             <div class="flex justify-between items-start mb-2">
               <div class="text-muted text-sm">Active Sessions</div>
-              <div class="text-info text-2xl">⚡</div>
+              <div class="text-info text-2xl font-bold">kW</div>
             </div>
             <div class="text-3xl font-bold mb-1">573</div>
             <div class="text-sm text-success">↑ 5.7% from last hour</div>

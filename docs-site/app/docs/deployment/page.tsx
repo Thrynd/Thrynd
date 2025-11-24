@@ -355,7 +355,7 @@ import '@thrynd/css/dist/thrynd.min.css'`}
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">⚡ CDN Caching</h4>
+            <h4 className="font-semibold mb-3">CDN Caching</h4>
             <p className="text-sm text-muted">
               Use a CDN like unpkg or jsDelivr for automatic caching and global distribution.
             </p>

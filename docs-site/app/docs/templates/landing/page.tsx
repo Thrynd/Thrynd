@@ -84,7 +84,7 @@ export default function LandingTemplatePage() {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="card text-center">
           <div class="card-body">
-            <div class="text-4xl mb-4">⚡</div>
+            <div class="text-4xl mb-4 font-bold">*</div>
             <h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
             <p class="text-muted">
               Optimized for performance with minimal CSS footprint
