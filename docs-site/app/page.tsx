@@ -66,16 +66,29 @@ export default function Home() {
             {/* Left - Hero Content */}
             <div>
               {/* Logo and Name */}
-              <div className="flex items-center gap-4 mb-8">
-                <Image src="/assets/thrynd.png" alt="Thrynd Logo" width={80} height={80} priority style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.3))' }} />
-                <h1
-                  className="text-5xl md:text-6xl lg:text-7xl font-bold"
+              <div className="flex items-center gap-6 mb-8">
+                <Image
+                  src="/assets/thrynd.png"
+                  alt="Thrynd Logo"
+                  width={280}
+                  height={280}
+                  priority
                   style={{
+                    filter: 'drop-shadow(0 8px 40px rgba(0,0,0,0.4))',
+                    maxWidth: '280px',
+                    height: 'auto',
+                  }}
+                />
+                <h1
+                  className="font-bold"
+                  style={{
+                    fontSize: 'clamp(64px, 10vw, 120px)',
                     background: 'linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    textShadow: '0 2px 40px rgba(255,255,255,0.3)',
+                    filter: 'drop-shadow(0 4px 30px rgba(255,255,255,0.5))',
+                    letterSpacing: '-0.02em',
                   }}
                 >
                   Thrynd
