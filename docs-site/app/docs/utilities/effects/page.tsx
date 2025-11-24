@@ -312,7 +312,7 @@ export default function EffectsPage() {
 
       <h2 className="mt-12">Performance</h2>
       <div className="alert alert-primary mb-6">
-        <strong>💡 Best Practices:</strong>
+        <strong>Best Practices:</strong>
         <ul className="mt-2 ml-4" style={{ listStyle: 'disc' }}>
           <li>Use <code>transform</code> and <code>opacity</code> for smooth 60fps animations</li>
           <li>Apply <code>will-change</code> sparingly for frequently animated properties</li>

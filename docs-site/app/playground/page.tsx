@@ -151,7 +151,7 @@ export default function Playground() {
       <div style={{ borderTop: '1px solid var(--color-border)', padding: '0.75rem 1.5rem', background: 'var(--color-gray-50)' }}>
         <div className="container flex items-center justify-between">
           <div className="text-sm text-muted">
-            💡 Tip: Try switching themes to see how components adapt automatically
+            Tip: Try switching themes to see how components adapt automatically
           </div>
           <div className="text-sm">
             <a href="/docs/components" className="text-primary font-semibold">

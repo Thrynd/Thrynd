@@ -10,7 +10,7 @@ export default function LandingTemplatePage() {
       </p>
 
       <div className="alert alert-primary mb-8">
-        <strong>📋 Template Includes:</strong>
+        <strong>Template Includes:</strong>
         <ul className="mt-2 ml-4" style={{ listStyle: 'disc' }}>
           <li>Navigation bar with logo and menu</li>
           <li>Hero section with headline and CTA</li>

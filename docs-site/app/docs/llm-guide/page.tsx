@@ -18,7 +18,7 @@ export default function LLMGuide() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="card">
           <div className="card-body">
-            <h3 className="font-semibold mb-2">📋 Usage Patterns</h3>
+            <h3 className="font-semibold mb-2">Usage Patterns</h3>
             <p className="text-sm text-muted">
               Clear descriptions of when and how to use each component variant.
             </p>
@@ -27,7 +27,7 @@ export default function LLMGuide() {
 
         <div className="card">
           <div className="card-body">
-            <h3 className="font-semibold mb-2">💡 Code Examples</h3>
+            <h3 className="font-semibold mb-2">Code Examples</h3>
             <p className="text-sm text-muted">
               Complete, copy-paste ready examples for every component.
             </p>
@@ -36,7 +36,7 @@ export default function LLMGuide() {
 
         <div className="card">
           <div className="card-body">
-            <h3 className="font-semibold mb-2">⚠️ Anti-Patterns</h3>
+            <h3 className="font-semibold mb-2">Anti-Patterns</h3>
             <p className="text-sm text-muted">
               Common mistakes with severity levels to prevent incorrect usage.
             </p>
@@ -165,11 +165,11 @@ export default function LLMGuide() {
         </div>
 
         <div className="alert alert-warning">
-          <strong>⚠ Avoid:</strong> Mixing Thrynd with other CSS frameworks in the same prompt
+          <strong>Avoid:</strong> Mixing Thrynd with other CSS frameworks in the same prompt
         </div>
 
         <div className="alert alert-warning">
-          <strong>⚠ Avoid:</strong> Using generic terms like "make it look good" - be specific
+          <strong>Avoid:</strong> Using generic terms like "make it look good" - be specific
         </div>
       </div>
 

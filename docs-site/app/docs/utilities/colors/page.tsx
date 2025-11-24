@@ -30,7 +30,7 @@ export default function ColorsPage() {
       </p>
 
       <div className="alert alert-primary mb-12">
-        <strong>💡 Theme-Aware:</strong> Semantic colors (primary, success, etc.) automatically adapt to your selected theme.
+        <strong>Theme-Aware:</strong> Semantic colors (primary, success, etc.) automatically adapt to your selected theme.
       </div>
 
       <h2>Semantic Colors</h2>

@@ -369,7 +369,7 @@ export default function ResponsivePage() {
 
       <h2 className="mt-12">Best Practices</h2>
       <div className="alert alert-primary mb-8">
-        <strong>💡 Tips for Responsive Design:</strong>
+        <strong>Tips for Responsive Design:</strong>
         <ul className="mt-2 ml-4" style={{ listStyle: 'disc' }}>
           <li>Start with mobile styles first (unprefixed utilities)</li>
           <li>Add complexity at larger breakpoints progressively</li>

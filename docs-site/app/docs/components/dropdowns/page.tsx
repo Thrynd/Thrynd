@@ -323,11 +323,11 @@ export default function DropdownsPage() {
   <div class="dropdown-menu dropdown-menu-right">
     <div class="dropdown-header">john@example.com</div>
     <div class="dropdown-divider"></div>
-    <a href="#" class="dropdown-item">👤 Your Profile</a>
-    <a href="#" class="dropdown-item">⚙️ Settings</a>
-    <a href="#" class="dropdown-item">💳 Billing</a>
+    <a href="#" class="dropdown-item">Your Profile</a>
+    <a href="#" class="dropdown-item">Settings</a>
+    <a href="#" class="dropdown-item">Billing</a>
     <div class="dropdown-divider"></div>
-    <a href="#" class="dropdown-item">🚪 Sign Out</a>
+    <a href="#" class="dropdown-item">Sign Out</a>
   </div>
 </div>`}
       >
@@ -342,11 +342,11 @@ export default function DropdownsPage() {
             <div className="dropdown-menu dropdown-menu-right">
               <div className="dropdown-header">john@example.com</div>
               <div className="dropdown-divider"></div>
-              <a href="#" className="dropdown-item">👤 Your Profile</a>
-              <a href="#" className="dropdown-item">⚙️ Settings</a>
-              <a href="#" className="dropdown-item">💳 Billing</a>
+              <a href="#" className="dropdown-item">Your Profile</a>
+              <a href="#" className="dropdown-item">Settings</a>
+              <a href="#" className="dropdown-item">Billing</a>
               <div className="dropdown-divider"></div>
-              <a href="#" className="dropdown-item">🚪 Sign Out</a>
+              <a href="#" className="dropdown-item">Sign Out</a>
             </div>
           </div>
         </div>
@@ -365,15 +365,15 @@ export default function DropdownsPage() {
       <div class="dropdown">
         <button class="btn-ghost btn-sm">⋮</button>
         <div class="dropdown-menu dropdown-menu-right">
-          <a href="#" class="dropdown-item">📝 Edit</a>
-          <a href="#" class="dropdown-item">📋 Copy Link</a>
-          <a href="#" class="dropdown-item">📥 Download</a>
-          <a href="#" class="dropdown-item">🔗 Share</a>
+          <a href="#" class="dropdown-item">Edit</a>
+          <a href="#" class="dropdown-item">Copy Link</a>
+          <a href="#" class="dropdown-item">Download</a>
+          <a href="#" class="dropdown-item">Share</a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">📁 Move to...</a>
-          <a href="#" class="dropdown-item">🗃️ Archive</a>
+          <a href="#" class="dropdown-item">Move to...</a>
+          <a href="#" class="dropdown-item">Archive</a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item text-danger">🗑️ Delete</a>
+          <a href="#" class="dropdown-item text-danger">Delete</a>
         </div>
       </div>
     </div>
@@ -390,15 +390,15 @@ export default function DropdownsPage() {
               <div className="dropdown">
                 <button className="btn-ghost btn-sm">⋮</button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <a href="#" className="dropdown-item">📝 Edit</a>
-                  <a href="#" className="dropdown-item">📋 Copy Link</a>
-                  <a href="#" className="dropdown-item">📥 Download</a>
-                  <a href="#" className="dropdown-item">🔗 Share</a>
+                  <a href="#" className="dropdown-item">Edit</a>
+                  <a href="#" className="dropdown-item">Copy Link</a>
+                  <a href="#" className="dropdown-item">Download</a>
+                  <a href="#" className="dropdown-item">Share</a>
                   <div className="dropdown-divider"></div>
-                  <a href="#" className="dropdown-item">📁 Move to...</a>
-                  <a href="#" className="dropdown-item">🗃️ Archive</a>
+                  <a href="#" className="dropdown-item">Move to...</a>
+                  <a href="#" className="dropdown-item">Archive</a>
                   <div className="dropdown-divider"></div>
-                  <a href="#" className="dropdown-item text-danger">🗑️ Delete</a>
+                  <a href="#" className="dropdown-item text-danger">Delete</a>
                 </div>
               </div>
             </div>
@@ -411,7 +411,7 @@ export default function DropdownsPage() {
         title="Rich Popover Content"
         code={`<div class="popover-container">
   <button class="btn-ghost relative">
-    🔔
+    Notifications
     <span class="badge badge-danger badge-sm" style="position: absolute; top: 0; right: 0;">3</span>
   </button>
   <div class="popover popover-bottom" style="width: 320px;">
@@ -440,7 +440,7 @@ export default function DropdownsPage() {
       >
         <div className="popover-container">
           <button className="btn-ghost relative">
-            🔔
+            Notifications
             <span className="badge badge-danger badge-sm" style={{ position: 'absolute', top: 0, right: 0 }}>3</span>
           </button>
           <div className="popover popover-bottom" style={{ width: '320px' }}>

@@ -333,7 +333,7 @@ import '@thrynd/css/dist/thrynd.min.css'`}
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">📦 Gzip Compression</h4>
+            <h4 className="font-semibold mb-3">Gzip Compression</h4>
             <p className="text-sm text-muted mb-3">
               Enable gzip compression on your server for an additional 70% reduction.
             </p>
@@ -346,7 +346,7 @@ import '@thrynd/css/dist/thrynd.min.css'`}
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">🎯 Tree Shaking</h4>
+            <h4 className="font-semibold mb-3">Tree Shaking</h4>
             <p className="text-sm text-muted">
               Import only the components you need by importing source files directly and using PurgeCSS.
             </p>
@@ -402,7 +402,7 @@ module.exports = {
 
       <div className="card mb-8">
         <div className="card-body">
-          <h4 className="font-semibold mb-4">✅ Pre-Deployment</h4>
+          <h4 className="font-semibold mb-4">Pre-Deployment</h4>
           <ul className="space-y-2" style={{ listStyle: 'none', padding: 0 }}>
             <li className="flex items-start gap-2">
               <input type="checkbox" className="form-checkbox mt-1" />

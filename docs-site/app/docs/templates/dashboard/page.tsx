@@ -10,7 +10,7 @@ export default function DashboardTemplatePage() {
       </p>
 
       <div className="alert alert-primary mb-8">
-        <strong>📋 Template Includes:</strong>
+        <strong>Template Includes:</strong>
         <ul className="mt-2 ml-4" style={{ listStyle: 'disc' }}>
           <li>Responsive sidebar navigation</li>
           <li>Top header with user menu</li>
@@ -98,22 +98,22 @@ export default function DashboardTemplatePage() {
 
       <nav class="sidebar-nav">
         <a href="#" class="active">
-          📊 Dashboard
+          Dashboard
         </a>
         <a href="#">
-          👥 Users
+          Users
         </a>
         <a href="#">
-          📦 Products
+          Products
         </a>
         <a href="#">
-          📈 Analytics
+          Analytics
         </a>
         <a href="#">
-          💳 Orders
+          Orders
         </a>
         <a href="#">
-          ⚙️ Settings
+          Settings
         </a>
       </nav>
 
@@ -142,7 +142,7 @@ export default function DashboardTemplatePage() {
 
           <div class="flex items-center gap-4">
             <button class="btn-ghost relative">
-              🔔
+              Alerts
               <span class="badge badge-danger badge-sm" style="position: absolute; top: -4px; right: -4px;">3</span>
             </button>
 
@@ -427,7 +427,7 @@ export default function DashboardTemplatePage() {
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">📋 Data Tables</h4>
+            <h4 className="font-semibold mb-3">Data Tables</h4>
             <p className="text-sm text-muted">
               Responsive tables with action menus. Add sorting and pagination as needed.
             </p>

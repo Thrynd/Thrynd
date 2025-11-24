@@ -149,16 +149,16 @@ export default function NavigationPage() {
   </div>
   <ul class="sidebar-nav">
     <li><a href="/" class="sidebar-link active">
-      <span>📊 Overview</span>
+      <span>Overview</span>
     </a></li>
     <li><a href="/analytics" class="sidebar-link">
-      <span>📈 Analytics</span>
+      <span>Analytics</span>
     </a></li>
     <li><a href="/reports" class="sidebar-link">
-      <span>📄 Reports</span>
+      <span>Reports</span>
     </a></li>
     <li><a href="/settings" class="sidebar-link">
-      <span>⚙️ Settings</span>
+      <span>Settings</span>
     </a></li>
   </ul>
 </nav>`}
@@ -169,16 +169,16 @@ export default function NavigationPage() {
           </div>
           <ul className="sidebar-nav">
             <li><a href="/" className="sidebar-link active">
-              <span>📊 Overview</span>
+              <span>Overview</span>
             </a></li>
             <li><a href="/analytics" className="sidebar-link">
-              <span>📈 Analytics</span>
+              <span>Analytics</span>
             </a></li>
             <li><a href="/reports" className="sidebar-link">
-              <span>📄 Reports</span>
+              <span>Reports</span>
             </a></li>
             <li><a href="/settings" className="sidebar-link">
-              <span>⚙️ Settings</span>
+              <span>Settings</span>
             </a></li>
           </ul>
         </nav>

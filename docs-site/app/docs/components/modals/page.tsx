@@ -33,7 +33,7 @@ export default function ModalsPage() {
 </div>`}</CodeBlock>
 
       <div className="alert alert-primary mt-6 mb-8">
-        <strong>💡 Note:</strong> Modals require JavaScript to show/hide. Add <code>display: flex</code> to <code>modal-backdrop</code> to show the modal, or <code>display: none</code> to hide it.
+        <strong>Note:</strong> Modals require JavaScript to show/hide. Add <code>display: flex</code> to <code>modal-backdrop</code> to show the modal, or <code>display: none</code> to hide it.
       </div>
 
       <h2>Modal Sizes</h2>

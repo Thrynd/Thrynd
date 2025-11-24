@@ -54,7 +54,7 @@ export default function UtilitiesOverview() {
       </p>
 
       <div className="alert alert-primary mb-12">
-        <strong>💡 Philosophy:</strong> Utilities are low-level classes that do one thing well. Combine them with component classes for maximum flexibility.
+        <strong>Philosophy:</strong> Utilities are low-level classes that do one thing well. Combine them with component classes for maximum flexibility.
       </div>
 
       <div className="grid grid-cols-1 gap-6 mb-12">

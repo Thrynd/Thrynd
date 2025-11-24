@@ -64,7 +64,7 @@ export default function ThemesPage() {
       </p>
 
       <div className="alert alert-primary mb-12">
-        <strong>💡 Try it now:</strong> Click on any theme below to see this entire page change instantly. All components adapt automatically!
+        <strong>Try it now:</strong> Click on any theme below to see this entire page change instantly. All components adapt automatically!
       </div>
 
       {/* Theme Grid */}
@@ -243,7 +243,7 @@ document.body.className = savedTheme;`}</CodeBlock>
       </div>
 
       <div className="alert alert-primary mt-12">
-        <strong>🎨 Explore More:</strong> Visit the <a href="/playground" className="font-semibold underline">Interactive Playground</a> to experiment with all themes and components.
+        <strong>Explore More:</strong> Visit the <a href="/playground" className="font-semibold underline">Interactive Playground</a> to experiment with all themes and components.
       </div>
 
       <div className="mt-12 pt-8" style={{ borderTop: '1px solid var(--color-border)' }}>

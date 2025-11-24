@@ -35,7 +35,7 @@ export function ThemeSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Switch theme"
       >
-        🎨 Theme
+        Theme
       </button>
 
       {isOpen && (

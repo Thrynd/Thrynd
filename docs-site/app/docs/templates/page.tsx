@@ -6,31 +6,31 @@ export default function TemplatesPage() {
       title: 'Landing Page',
       description: 'Modern landing page with hero section, features, and call-to-action',
       href: '/docs/templates/landing',
-      preview: '🎯'
+      preview: 'LP'
     },
     {
       title: 'Dashboard',
       description: 'Admin dashboard with sidebar navigation, stats cards, and data tables',
       href: '/docs/templates/dashboard',
-      preview: '📊'
+      preview: 'DB'
     },
     {
       title: 'Authentication',
       description: 'Login and signup forms with validation and social auth options',
       href: '/docs/templates/auth',
-      preview: '🔐'
+      preview: 'AU'
     },
     {
       title: 'Blog',
       description: 'Blog layout with article cards, sidebar, and pagination',
       href: '/docs/templates/blog',
-      preview: '📝'
+      preview: 'BL'
     },
     {
       title: 'E-commerce',
       description: 'Product page with image gallery, details, and cart functionality',
       href: '/docs/templates/ecommerce',
-      preview: '🛍️'
+      preview: 'EC'
     },
   ]
 
@@ -42,7 +42,7 @@ export default function TemplatesPage() {
       </p>
 
       <div className="alert alert-primary mb-8">
-        <strong>💡 Getting Started:</strong>
+        <strong>Getting Started:</strong>
         <p className="mt-2">
           These templates are ready-to-use page layouts that demonstrate best practices
           and common patterns. Copy the HTML and customize it for your needs.
@@ -55,7 +55,7 @@ export default function TemplatesPage() {
         {templates.map((template) => (
           <Link key={template.href} href={template.href} className="card hover:shadow-xl transition-all">
             <div className="card-body">
-              <div className="text-4xl mb-4">{template.preview}</div>
+              <div className="text-2xl font-bold mb-4 text-primary">{template.preview}</div>
               <h3 className="text-xl font-bold mb-2">{template.title}</h3>
               <p className="text-sm text-muted mb-4">{template.description}</p>
               <div className="flex justify-end">

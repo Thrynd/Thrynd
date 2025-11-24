@@ -10,7 +10,7 @@ export default function AuthTemplatePage() {
       </p>
 
       <div className="alert alert-primary mb-8">
-        <strong>📋 Template Includes:</strong>
+        <strong>Template Includes:</strong>
         <ul className="mt-2 ml-4" style={{ listStyle: 'disc' }}>
           <li>Modern login form</li>
           <li>Sign up with email verification</li>
@@ -429,7 +429,7 @@ export default function AuthTemplatePage() {
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">✅ Email Verification</h4>
+            <h4 className="font-semibold mb-3">Email Verification</h4>
             <p className="text-sm text-muted">
               Always verify email addresses before granting full access. Send a confirmation link that expires after 24 hours.
             </p>
@@ -438,7 +438,7 @@ export default function AuthTemplatePage() {
 
         <div className="card">
           <div className="card-body">
-            <h4 className="font-semibold mb-3">🛡️ CSRF Protection</h4>
+            <h4 className="font-semibold mb-3">CSRF Protection</h4>
             <p className="text-sm text-muted">
               Include CSRF tokens in all forms to prevent cross-site request forgery attacks.
             </p>
