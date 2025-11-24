@@ -20,8 +20,16 @@
   box-sizing: border-box;
 }
 
-* {
+/* Reset margins on common block elements only - not all elements */
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+dl, dd, ol, ul, figure, hr, fieldset, legend {
   margin: 0;
+}
+
+/* Reset padding on list elements only */
+
+ol, ul, menu {
   padding: 0;
 }
 
@@ -1197,6 +1205,157 @@ body.theme-corporate,
  * Button component styles with variants
  */
 
+/**
+ * @thrynd component button
+ * @description Interactive button element for user actions and form submissions
+ * @category form
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent button
+ * @class btn-primary
+ * @usage Main call-to-action, most important action on page
+ * @example <button class="btn-primary">Submit</button>
+ * @semantic Primary action - use once per section
+ */
+
+/**
+ * @thrynd variant secondary
+ * @parent button
+ * @class btn-secondary
+ * @usage Alternative actions, cancel buttons, supporting actions
+ * @example <button class="btn-secondary">Cancel</button>
+ * @semantic Secondary actions - can use multiple times
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent button
+ * @class btn-danger
+ * @usage Destructive actions (delete, remove, clear)
+ * @example <button class="btn-danger">Delete</button>
+ * @semantic Warns user of destructive action
+ */
+
+/**
+ * @thrynd variant ghost
+ * @parent button
+ * @class btn-ghost
+ * @usage Subtle actions in busy interfaces, tertiary actions
+ * @example <button class="btn-ghost">Edit</button>
+ * @semantic Low-emphasis actions
+ */
+
+/**
+ * @thrynd size small
+ * @parent button
+ * @class btn-sm
+ * @usage Compact UI, tables, inline actions
+ * @example <button class="btn-primary btn-sm">Save</button>
+ */
+
+/**
+ * @thrynd size medium
+ * @parent button
+ * @class null
+ * @usage Default size, most UI elements
+ * @example <button class="btn-primary">Submit</button>
+ * @default true
+ */
+
+/**
+ * @thrynd size large
+ * @parent button
+ * @class btn-lg
+ * @usage Hero sections, landing pages, prominent CTAs
+ * @example <button class="btn-primary btn-lg">Get Started</button>
+ */
+
+/**
+ * @thrynd modifier outline
+ * @parent button
+ * @class btn-outline
+ * @usage Hollow button with border only
+ * @example <button class="btn-primary btn-outline">Outlined</button>
+ * @combines Can combine with any variant
+ */
+
+/**
+ * @thrynd modifier block
+ * @parent button
+ * @class btn-block
+ * @usage Full-width button
+ * @example <button class="btn-primary btn-block">Full Width</button>
+ * @combines Can combine with any variant or size
+ */
+
+/**
+ * @thrynd modifier loading
+ * @parent button
+ * @class btn-loading
+ * @usage Shows loading spinner during async operations
+ * @example <button class="btn-primary btn-loading" disabled>Loading...</button>
+ * @combines Add disabled attribute when loading
+ */
+
+/**
+ * @thrynd state hover
+ * @parent button
+ * @automatic true
+ * @description Darker background on hover
+ */
+
+/**
+ * @thrynd state disabled
+ * @parent button
+ * @attribute disabled
+ * @example <button class="btn-primary" disabled>Disabled</button>
+ * @description Reduced opacity and no pointer events
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent button
+ * @keyboard Activated with Enter or Space
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent button
+ * @screenReader Button role implicit, ensure meaningful text
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent button
+ * @required Accessible text content or aria-label
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent button
+ * @required type="button" or type="submit" attribute
+ */
+
+/**
+ * @thrynd combination heroCTA
+ * @parent button
+ * @classes btn-primary btn-lg
+ * @usage Hero section CTA
+ * @context Landing pages, main conversion point
+ */
+
+/**
+ * @thrynd antipattern multipleVariants
+ * @parent button
+ * @pattern Using multiple variants (btn-primary btn-secondary)
+ * @reason Only one variant should be applied
+ * @severity error
+ * @suggestion Choose one variant based on the action's importance
+ */
+
 /* Base button styles */
 
 button {
@@ -1397,6 +1556,109 @@ a.btn-ghost {
  * Card component styles with variants
  */
 
+/**
+ * @thrynd component card
+ * @description Container component for grouping related content with visual boundary
+ * @category layout
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent card
+ * @class card
+ * @usage Basic card with subtle border, general content grouping
+ * @example <div class="card"><div class="card-body">Content</div></div>
+ * @semantic Standard content container
+ */
+
+/**
+ * @thrynd variant elevated
+ * @parent card
+ * @class card-elevated
+ * @usage Featured content, interactive cards, hover effects
+ * @example <div class="card-elevated"><div class="card-body">Featured</div></div>
+ * @semantic Emphasized content with shadow and hover animation
+ */
+
+/**
+ * @thrynd variant outlined
+ * @parent card
+ * @class card-outlined
+ * @usage Strong visual boundary, form sections, grouped inputs
+ * @example <div class="card-outlined"><div class="card-body">Outlined</div></div>
+ * @semantic Content with prominent border
+ */
+
+/**
+ * @thrynd part header
+ * @parent card
+ * @class card-header
+ * @usage Card title area with bottom border
+ * @example <div class="card"><div class="card-header">Title</div><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part body
+ * @parent card
+ * @class card-body
+ * @usage Main content area with padding
+ * @example <div class="card"><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part footer
+ * @parent card
+ * @class card-footer
+ * @usage Actions area with top border and surface background
+ * @example <div class="card"><div class="card-body">Content</div><div class="card-footer">Actions</div></div>
+ */
+
+/**
+ * @thrynd part image
+ * @parent card
+ * @class card-img
+ * @usage Full-width image, typically at top of card
+ * @example <div class="card"><img class="card-img" src="..." alt="..."><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part title
+ * @parent card
+ * @class card-title
+ * @usage Card heading with bold text
+ * @example <div class="card-body"><h3 class="card-title">Title</h3><p>Content</p></div>
+ */
+
+/**
+ * @thrynd modifier link
+ * @parent card
+ * @class card-link
+ * @usage Wraps card to make entire card clickable
+ * @example <a href="#" class="card-link"><div class="card">Clickable card</div></a>
+ * @combines Wrap around any card variant
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent card
+ * @keyboard Use card-link wrapper for keyboard-accessible clickable cards
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent card
+ * @screenReader Ensure card-link has descriptive text or aria-label
+ */
+
+/**
+ * @thrynd combination featuredCard
+ * @parent card
+ * @classes card-elevated card-img card-body card-title
+ * @usage Product cards, blog post previews
+ * @context E-commerce, content listings
+ */
+
 /* Base card styles */
 
 .card {
@@ -1483,6 +1745,122 @@ a.btn-ghost {
 /*
  * Thrynd Forms
  * Form component styles
+ */
+
+/**
+ * @thrynd component form
+ * @description Form elements for user input including text fields, selects, checkboxes
+ * @category form
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd part group
+ * @parent form
+ * @class form-group
+ * @usage Wrapper for label + input pairs with consistent spacing
+ * @example <div class="form-group"><label>Name</label><input type="text" class="form-input"></div>
+ */
+
+/**
+ * @thrynd variant input
+ * @parent form
+ * @class form-input
+ * @usage Explicit input styling (also applied to text, email, password inputs by default)
+ * @example <input type="text" class="form-input" placeholder="Enter text">
+ * @semantic Standard text input field
+ */
+
+/**
+ * @thrynd state error
+ * @parent form
+ * @class form-input-error
+ * @usage Input validation failed
+ * @example <input type="email" class="form-input form-input-error"><span class="form-error">Invalid email</span>
+ * @attribute Also supports .error class on input
+ */
+
+/**
+ * @thrynd state success
+ * @parent form
+ * @class form-input-success
+ * @usage Input validation passed
+ * @example <input type="email" class="form-input form-input-success"><span class="form-success">Looks good!</span>
+ * @attribute Also supports .success class on input
+ */
+
+/**
+ * @thrynd state disabled
+ * @parent form
+ * @attribute disabled
+ * @description Grayed out with no interaction
+ * @example <input type="text" class="form-input" disabled>
+ */
+
+/**
+ * @thrynd part checkbox
+ * @parent form
+ * @class form-checkbox
+ * @usage Styled checkbox input
+ * @example <input type="checkbox" class="form-checkbox"> Accept terms
+ */
+
+/**
+ * @thrynd part radio
+ * @parent form
+ * @class form-radio
+ * @usage Styled radio button input
+ * @example <input type="radio" name="option" class="form-radio"> Option A
+ */
+
+/**
+ * @thrynd part help
+ * @parent form
+ * @class form-help
+ * @usage Helper text below input
+ * @example <input type="text" class="form-input"><span class="form-help">Enter your full name</span>
+ */
+
+/**
+ * @thrynd part error-message
+ * @parent form
+ * @class form-error
+ * @usage Error message text in danger color
+ * @example <span class="form-error">This field is required</span>
+ */
+
+/**
+ * @thrynd part success-message
+ * @parent form
+ * @class form-success
+ * @usage Success message text in success color
+ * @example <span class="form-success">Username available</span>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent form
+ * @required Always use label elements associated with inputs
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent form
+ * @required Use aria-describedby to link inputs to help/error text
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent form
+ * @keyboard All form elements focusable with visible focus ring
+ */
+
+/**
+ * @thrynd combination validatedInput
+ * @parent form
+ * @classes form-group form-input form-error
+ * @usage Form field with validation feedback
+ * @context User registration, data entry forms
  */
 
 /* Form group */
@@ -1667,6 +2045,228 @@ select.success:focus {
 /*
  * Thrynd Navigation
  * Navigation components (navbar, sidebar, breadcrumbs, tabs)
+ */
+
+/**
+ * @thrynd component navbar
+ * @description Top navigation bar with brand, links, and actions
+ * @category navigation
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent navbar
+ * @class navbar
+ * @usage Standard navigation bar with surface background
+ * @example <nav class="navbar"><a class="navbar-brand" href="#">Brand</a><ul class="navbar-nav"><li><a class="navbar-link" href="#">Link</a></li></ul></nav>
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent navbar
+ * @class navbar-primary
+ * @usage Branded navbar with primary color background
+ * @example <nav class="navbar navbar-primary">...</nav>
+ * @semantic Site header with brand emphasis
+ */
+
+/**
+ * @thrynd part brand
+ * @parent navbar
+ * @class navbar-brand
+ * @usage Logo/site name link
+ * @example <a class="navbar-brand" href="/">Site Name</a>
+ */
+
+/**
+ * @thrynd part nav
+ * @parent navbar
+ * @class navbar-nav
+ * @usage Navigation link container
+ * @example <ul class="navbar-nav"><li><a class="navbar-link" href="#">Link</a></li></ul>
+ */
+
+/**
+ * @thrynd part link
+ * @parent navbar
+ * @class navbar-link
+ * @usage Navigation link within navbar
+ * @example <a class="navbar-link" href="#">Page</a>
+ */
+
+/**
+ * @thrynd state active
+ * @parent navbar
+ * @class active
+ * @description Current page indicator on navbar-link
+ * @example <a class="navbar-link active" href="#">Current Page</a>
+ */
+
+/**
+ * @thrynd part toggle
+ * @parent navbar
+ * @class navbar-toggle
+ * @usage Mobile menu toggle button (hidden on desktop)
+ * @example <button class="navbar-toggle">Menu</button>
+ */
+
+/**
+ * @thrynd component sidebar
+ * @description Vertical navigation panel
+ * @category navigation
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent sidebar
+ * @class sidebar
+ * @usage Fixed-width vertical navigation
+ * @example <aside class="sidebar"><nav class="sidebar-nav">...</nav></aside>
+ */
+
+/**
+ * @thrynd part header
+ * @parent sidebar
+ * @class sidebar-header
+ * @usage Sidebar title/branding area
+ * @example <div class="sidebar-header"><h2>Dashboard</h2></div>
+ */
+
+/**
+ * @thrynd part nav
+ * @parent sidebar
+ * @class sidebar-nav
+ * @usage Sidebar navigation list container
+ * @example <nav class="sidebar-nav"><a class="nav-item" href="#">Item</a></nav>
+ */
+
+/**
+ * @thrynd part item
+ * @parent sidebar
+ * @class nav-item
+ * @usage Individual navigation item in sidebar
+ * @example <a class="nav-item" href="#">Dashboard</a>
+ */
+
+/**
+ * @thrynd component breadcrumb
+ * @description Hierarchical navigation trail
+ * @category navigation
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent breadcrumb
+ * @class breadcrumb
+ * @usage Container for breadcrumb trail
+ * @example <nav class="breadcrumb"><span class="breadcrumb-item"><a href="/">Home</a></span><span class="breadcrumb-item active">Current</span></nav>
+ */
+
+/**
+ * @thrynd part item
+ * @parent breadcrumb
+ * @class breadcrumb-item
+ * @usage Individual breadcrumb segment
+ * @example <span class="breadcrumb-item"><a href="#">Parent</a></span>
+ */
+
+/**
+ * @thrynd state active
+ * @parent breadcrumb
+ * @class active
+ * @description Current page (no link, muted text)
+ * @example <span class="breadcrumb-item active">Current Page</span>
+ */
+
+/**
+ * @thrynd component tabs
+ * @description Horizontal tab navigation
+ * @category navigation
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent tabs
+ * @class tabs
+ * @usage Tab container with bottom border
+ * @example <div class="tabs"><button class="tab active">Tab 1</button><button class="tab">Tab 2</button></div>
+ */
+
+/**
+ * @thrynd part tab
+ * @parent tabs
+ * @class tab
+ * @usage Individual tab button/link
+ * @example <button class="tab">Tab Label</button>
+ */
+
+/**
+ * @thrynd state active
+ * @parent tabs
+ * @class active
+ * @description Currently selected tab
+ * @example <button class="tab active">Active Tab</button>
+ */
+
+/**
+ * @thrynd component pagination
+ * @description Page navigation for paginated content
+ * @category navigation
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent pagination
+ * @class pagination
+ * @usage Container for pagination controls
+ * @example <nav class="pagination"><a class="pagination-item" href="#">1</a><a class="pagination-item active" href="#">2</a></nav>
+ */
+
+/**
+ * @thrynd part item
+ * @parent pagination
+ * @class pagination-item
+ * @usage Individual page number/control
+ * @example <a class="pagination-item" href="?page=2">2</a>
+ */
+
+/**
+ * @thrynd state active
+ * @parent pagination
+ * @class active
+ * @description Current page indicator
+ * @example <span class="pagination-item active">2</span>
+ */
+
+/**
+ * @thrynd state disabled
+ * @parent pagination
+ * @class disabled
+ * @description Non-clickable pagination item
+ * @example <span class="pagination-item disabled">...</span>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent navbar
+ * @required Use nav element with aria-label for main navigation
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent breadcrumb
+ * @required Use nav element with aria-label="Breadcrumb"
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent tabs
+ * @keyboard Implement arrow key navigation between tabs
  */
 
 /* Navbar */
@@ -1923,6 +2523,291 @@ select.success:focus {
 /*
  * Thrynd Feedback Components
  * Alerts, badges, tooltips, progress bars
+ */
+
+/**
+ * @thrynd component alert
+ * @description Contextual feedback messages for user actions and system status
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent alert
+ * @class alert-primary
+ * @usage General informational messages
+ * @example <div class="alert alert-primary">Information message</div>
+ * @semantic Neutral information
+ */
+
+/**
+ * @thrynd variant success
+ * @parent alert
+ * @class alert-success
+ * @usage Successful operations, confirmations
+ * @example <div class="alert alert-success">Operation completed successfully</div>
+ * @semantic Positive outcome
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent alert
+ * @class alert-danger
+ * @usage Errors, critical warnings
+ * @example <div class="alert alert-danger">An error occurred</div>
+ * @semantic Negative outcome or error
+ */
+
+/**
+ * @thrynd variant warning
+ * @parent alert
+ * @class alert-warning
+ * @usage Caution messages, non-critical issues
+ * @example <div class="alert alert-warning">Please review before continuing</div>
+ * @semantic Caution required
+ */
+
+/**
+ * @thrynd variant info
+ * @parent alert
+ * @class alert-info
+ * @usage Tips, helpful information
+ * @example <div class="alert alert-info">Tip: You can also use keyboard shortcuts</div>
+ * @semantic Helpful information
+ */
+
+/**
+ * @thrynd part title
+ * @parent alert
+ * @class alert-title
+ * @usage Bold heading within alert
+ * @example <div class="alert alert-success"><div class="alert-title">Success!</div>Your changes were saved.</div>
+ */
+
+/**
+ * @thrynd part close
+ * @parent alert
+ * @class alert-close
+ * @usage Dismissible alert close button
+ * @example <div class="alert alert-info"><button class="alert-close">&times;</button>Dismissible alert</div>
+ */
+
+/**
+ * @thrynd component badge
+ * @description Small status indicators and labels
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent badge
+ * @class badge-primary
+ * @usage Default badge style
+ * @example <span class="badge badge-primary">New</span>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent badge
+ * @class badge-success
+ * @usage Positive status indicators
+ * @example <span class="badge badge-success">Active</span>
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent badge
+ * @class badge-danger
+ * @usage Negative or alert status
+ * @example <span class="badge badge-danger">Error</span>
+ */
+
+/**
+ * @thrynd variant warning
+ * @parent badge
+ * @class badge-warning
+ * @usage Pending or caution status
+ * @example <span class="badge badge-warning">Pending</span>
+ */
+
+/**
+ * @thrynd modifier outline
+ * @parent badge
+ * @class badge-outline
+ * @usage Outlined badge variant
+ * @example <span class="badge badge-primary badge-outline">Outlined</span>
+ * @combines Can combine with any badge color variant
+ */
+
+/**
+ * @thrynd modifier pill
+ * @parent badge
+ * @class badge-pill
+ * @usage Rounded pill shape
+ * @example <span class="badge badge-primary badge-pill">99+</span>
+ * @combines Can combine with any badge variant
+ */
+
+/**
+ * @thrynd size large
+ * @parent badge
+ * @class badge-lg
+ * @usage Larger badge for emphasis
+ * @example <span class="badge badge-primary badge-lg">Featured</span>
+ */
+
+/**
+ * @thrynd component tooltip
+ * @description Hover-triggered informational popups
+ * @category feedback
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent tooltip
+ * @class tooltip
+ * @usage Wrapper element for tooltip trigger
+ * @example <span class="tooltip">Hover me<span class="tooltip-text">Tooltip content</span></span>
+ */
+
+/**
+ * @thrynd part text
+ * @parent tooltip
+ * @class tooltip-text
+ * @usage The tooltip content element
+ * @example <span class="tooltip-text">Helpful information</span>
+ */
+
+/**
+ * @thrynd modifier bottom
+ * @parent tooltip
+ * @class tooltip-bottom
+ * @usage Position tooltip below trigger
+ * @example <span class="tooltip tooltip-bottom">Hover<span class="tooltip-text">Below</span></span>
+ */
+
+/**
+ * @thrynd component progress
+ * @description Visual progress indicators
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent progress
+ * @class progress
+ * @usage Progress bar container
+ * @example <div class="progress"><div class="progress-bar" style="width: 50%">50%</div></div>
+ */
+
+/**
+ * @thrynd part bar
+ * @parent progress
+ * @class progress-bar
+ * @usage The filled progress indicator
+ * @example <div class="progress-bar" style="width: 75%"></div>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent progress
+ * @class progress-bar-success
+ * @usage Success/complete progress
+ * @example <div class="progress"><div class="progress-bar progress-bar-success" style="width: 100%"></div></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent progress
+ * @class progress-sm
+ * @usage Compact progress bar
+ * @example <div class="progress progress-sm"><div class="progress-bar" style="width: 50%"></div></div>
+ */
+
+/**
+ * @thrynd size large
+ * @parent progress
+ * @class progress-lg
+ * @usage Larger progress bar with text
+ * @example <div class="progress progress-lg"><div class="progress-bar" style="width: 50%">50%</div></div>
+ */
+
+/**
+ * @thrynd component spinner
+ * @description Loading indicator animation
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent spinner
+ * @class spinner
+ * @usage Standard loading spinner
+ * @example <div class="spinner"></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent spinner
+ * @class spinner-sm
+ * @usage Compact inline spinner
+ * @example <span class="spinner spinner-sm"></span> Loading...
+ */
+
+/**
+ * @thrynd size large
+ * @parent spinner
+ * @class spinner-lg
+ * @usage Large page-level spinner
+ * @example <div class="spinner spinner-lg"></div>
+ */
+
+/**
+ * @thrynd component toast
+ * @description Temporary notification messages
+ * @category feedback
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent toast
+ * @class toast
+ * @usage Base toast notification
+ * @example <div class="toast">Notification message</div>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent toast
+ * @class toast-success
+ * @usage Success notification
+ * @example <div class="toast toast-success">Changes saved!</div>
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent toast
+ * @class toast-danger
+ * @usage Error notification
+ * @example <div class="toast toast-danger">Failed to save</div>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent alert
+ * @required Use role="alert" for important alerts
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent spinner
+ * @screenReader Add aria-label="Loading" or visually hidden text
  */
 
 /* Alerts */
@@ -2239,6 +3124,227 @@ select.success:focus {
 /*
  * Thrynd Modal & Dialog
  * Modal dialogs and overlays
+ */
+
+/**
+ * @thrynd component modal
+ * @description Dialog overlay for focused user interaction
+ * @category overlay
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd part backdrop
+ * @parent modal
+ * @class modal-backdrop
+ * @usage Semi-transparent overlay behind modal
+ * @example <div class="modal-backdrop show"></div>
+ */
+
+/**
+ * @thrynd variant default
+ * @parent modal
+ * @class modal
+ * @usage Modal container (centered flexbox)
+ * @example <div class="modal show"><div class="modal-dialog">...</div></div>
+ */
+
+/**
+ * @thrynd part dialog
+ * @parent modal
+ * @class modal-dialog
+ * @usage The modal content container with max-width
+ * @example <div class="modal-dialog"><div class="modal-header">...</div><div class="modal-body">...</div></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent modal
+ * @class modal-dialog-sm
+ * @usage Narrow modal (300px max-width)
+ * @example <div class="modal-dialog modal-dialog-sm">...</div>
+ */
+
+/**
+ * @thrynd size large
+ * @parent modal
+ * @class modal-dialog-lg
+ * @usage Wide modal (800px max-width)
+ * @example <div class="modal-dialog modal-dialog-lg">...</div>
+ */
+
+/**
+ * @thrynd size xlarge
+ * @parent modal
+ * @class modal-dialog-xl
+ * @usage Extra wide modal (1140px max-width)
+ * @example <div class="modal-dialog modal-dialog-xl">...</div>
+ */
+
+/**
+ * @thrynd modifier fullscreen
+ * @parent modal
+ * @class modal-dialog-fullscreen
+ * @usage Full viewport modal
+ * @example <div class="modal-dialog modal-dialog-fullscreen">...</div>
+ */
+
+/**
+ * @thrynd part header
+ * @parent modal
+ * @class modal-header
+ * @usage Modal title bar with close button
+ * @example <div class="modal-header"><h2 class="modal-title">Title</h2><button class="modal-close">&times;</button></div>
+ */
+
+/**
+ * @thrynd part title
+ * @parent modal
+ * @class modal-title
+ * @usage Modal heading text
+ * @example <h2 class="modal-title">Confirm Action</h2>
+ */
+
+/**
+ * @thrynd part close
+ * @parent modal
+ * @class modal-close
+ * @usage Close button in header
+ * @example <button class="modal-close" aria-label="Close">&times;</button>
+ */
+
+/**
+ * @thrynd part body
+ * @parent modal
+ * @class modal-body
+ * @usage Main modal content area
+ * @example <div class="modal-body"><p>Modal content here</p></div>
+ */
+
+/**
+ * @thrynd part footer
+ * @parent modal
+ * @class modal-footer
+ * @usage Action buttons area
+ * @example <div class="modal-footer"><button class="btn-secondary">Cancel</button><button class="btn-primary">Confirm</button></div>
+ */
+
+/**
+ * @thrynd state show
+ * @parent modal
+ * @class show
+ * @description Makes modal visible
+ * @example <div class="modal show">...</div>
+ */
+
+/**
+ * @thrynd component dropdown
+ * @description Toggle-activated menu overlay
+ * @category overlay
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent dropdown
+ * @class dropdown
+ * @usage Container for dropdown trigger and menu
+ * @example <div class="dropdown"><button class="dropdown-toggle">Menu</button><div class="dropdown-menu">...</div></div>
+ */
+
+/**
+ * @thrynd part toggle
+ * @parent dropdown
+ * @class dropdown-toggle
+ * @usage Element that triggers dropdown
+ * @example <button class="dropdown-toggle">Options</button>
+ */
+
+/**
+ * @thrynd part menu
+ * @parent dropdown
+ * @class dropdown-menu
+ * @usage Dropdown content container
+ * @example <div class="dropdown-menu"><a class="dropdown-item" href="#">Option 1</a></div>
+ */
+
+/**
+ * @thrynd part item
+ * @parent dropdown
+ * @class dropdown-item
+ * @usage Individual menu option
+ * @example <a class="dropdown-item" href="#">Edit</a>
+ */
+
+/**
+ * @thrynd part divider
+ * @parent dropdown
+ * @class dropdown-divider
+ * @usage Horizontal separator between items
+ * @example <div class="dropdown-divider"></div>
+ */
+
+/**
+ * @thrynd modifier right
+ * @parent dropdown
+ * @class dropdown-menu-right
+ * @usage Align menu to right edge of trigger
+ * @example <div class="dropdown-menu dropdown-menu-right">...</div>
+ */
+
+/**
+ * @thrynd component popover
+ * @description Rich tooltip with header and body
+ * @category overlay
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent popover
+ * @class popover
+ * @usage Positioned content popup
+ * @example <div class="popover"><div class="popover-header">Title</div><div class="popover-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part header
+ * @parent popover
+ * @class popover-header
+ * @usage Popover title
+ * @example <div class="popover-header">Info</div>
+ */
+
+/**
+ * @thrynd part body
+ * @parent popover
+ * @class popover-body
+ * @usage Popover content
+ * @example <div class="popover-body">More details here</div>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent modal
+ * @required Use aria-modal="true" and role="dialog" on modal
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent modal
+ * @required Trap focus within modal when open
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent modal
+ * @keyboard Escape key should close modal
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent dropdown
+ * @required Use aria-expanded on toggle, aria-haspopup="menu"
  */
 
 /* Modal backdrop */
@@ -3060,6 +4166,18 @@ select.success:focus {
 
 .m-8 { margin: var(--space-8); }
 
+.m-10 { margin: var(--space-10); }
+
+.m-12 { margin: var(--space-12); }
+
+.m-16 { margin: var(--space-16); }
+
+.m-20 { margin: var(--space-20); }
+
+.m-24 { margin: var(--space-24); }
+
+.m-auto { margin: auto; }
+
 /* Margin top */
 
 .mt-0 { margin-top: var(--space-0); }
@@ -3076,6 +4194,16 @@ select.success:focus {
 
 .mt-8 { margin-top: var(--space-8); }
 
+.mt-10 { margin-top: var(--space-10); }
+
+.mt-12 { margin-top: var(--space-12); }
+
+.mt-16 { margin-top: var(--space-16); }
+
+.mt-20 { margin-top: var(--space-20); }
+
+.mt-24 { margin-top: var(--space-24); }
+
 /* Margin bottom */
 
 .mb-0 { margin-bottom: var(--space-0); }
@@ -3091,6 +4219,16 @@ select.success:focus {
 .mb-6 { margin-bottom: var(--space-6); }
 
 .mb-8 { margin-bottom: var(--space-8); }
+
+.mb-10 { margin-bottom: var(--space-10); }
+
+.mb-12 { margin-bottom: var(--space-12); }
+
+.mb-16 { margin-bottom: var(--space-16); }
+
+.mb-20 { margin-bottom: var(--space-20); }
+
+.mb-24 { margin-bottom: var(--space-24); }
 
 /* Margin left */
 
@@ -3136,6 +4274,20 @@ select.success:focus {
 
 .my-4 { margin-top: var(--space-4); margin-bottom: var(--space-4); }
 
+.my-6 { margin-top: var(--space-6); margin-bottom: var(--space-6); }
+
+.my-8 { margin-top: var(--space-8); margin-bottom: var(--space-8); }
+
+.my-10 { margin-top: var(--space-10); margin-bottom: var(--space-10); }
+
+.my-12 { margin-top: var(--space-12); margin-bottom: var(--space-12); }
+
+.my-16 { margin-top: var(--space-16); margin-bottom: var(--space-16); }
+
+.my-20 { margin-top: var(--space-20); margin-bottom: var(--space-20); }
+
+.my-24 { margin-top: var(--space-24); margin-bottom: var(--space-24); }
+
 /* Padding */
 
 .p-0 { padding: var(--space-0); }
@@ -3151,6 +4303,16 @@ select.success:focus {
 .p-6 { padding: var(--space-6); }
 
 .p-8 { padding: var(--space-8); }
+
+.p-10 { padding: var(--space-10); }
+
+.p-12 { padding: var(--space-12); }
+
+.p-16 { padding: var(--space-16); }
+
+.p-20 { padding: var(--space-20); }
+
+.p-24 { padding: var(--space-24); }
 
 /* Padding top */
 
@@ -3168,6 +4330,16 @@ select.success:focus {
 
 .pt-8 { padding-top: var(--space-8); }
 
+.pt-10 { padding-top: var(--space-10); }
+
+.pt-12 { padding-top: var(--space-12); }
+
+.pt-16 { padding-top: var(--space-16); }
+
+.pt-20 { padding-top: var(--space-20); }
+
+.pt-24 { padding-top: var(--space-24); }
+
 /* Padding bottom */
 
 .pb-0 { padding-bottom: var(--space-0); }
@@ -3184,6 +4356,16 @@ select.success:focus {
 
 .pb-8 { padding-bottom: var(--space-8); }
 
+.pb-10 { padding-bottom: var(--space-10); }
+
+.pb-12 { padding-bottom: var(--space-12); }
+
+.pb-16 { padding-bottom: var(--space-16); }
+
+.pb-20 { padding-bottom: var(--space-20); }
+
+.pb-24 { padding-bottom: var(--space-24); }
+
 /* Padding horizontal */
 
 .px-0 { padding-left: var(--space-0); padding-right: var(--space-0); }
@@ -3196,6 +4378,12 @@ select.success:focus {
 
 .px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
 
+.px-8 { padding-left: var(--space-8); padding-right: var(--space-8); }
+
+.px-10 { padding-left: var(--space-10); padding-right: var(--space-10); }
+
+.px-12 { padding-left: var(--space-12); padding-right: var(--space-12); }
+
 /* Padding vertical */
 
 .py-0 { padding-top: var(--space-0); padding-bottom: var(--space-0); }
@@ -3207,6 +4395,18 @@ select.success:focus {
 .py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
 
 .py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+
+.py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+
+.py-10 { padding-top: var(--space-10); padding-bottom: var(--space-10); }
+
+.py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+
+.py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+
+.py-20 { padding-top: var(--space-20); padding-bottom: var(--space-20); }
+
+.py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
 
 /*
  * Thrynd Color Utilities
@@ -3524,6 +4724,32 @@ select.success:focus {
 
 .border-transparent { border-color: transparent; }
 
+/* Border side colors */
+
+.border-t-transparent { border-top-color: transparent; }
+
+.border-r-transparent { border-right-color: transparent; }
+
+.border-b-transparent { border-bottom-color: transparent; }
+
+.border-l-transparent { border-left-color: transparent; }
+
+.border-t-primary { border-top-color: var(--color-primary); }
+
+.border-r-primary { border-right-color: var(--color-primary); }
+
+.border-b-primary { border-bottom-color: var(--color-primary); }
+
+.border-l-primary { border-left-color: var(--color-primary); }
+
+.border-t-success { border-top-color: var(--color-success); }
+
+.border-r-success { border-right-color: var(--color-success); }
+
+.border-b-success { border-bottom-color: var(--color-success); }
+
+.border-l-success { border-left-color: var(--color-success); }
+
 /* Border styles */
 
 .border-solid { border-style: solid; }
@@ -3808,6 +5034,62 @@ select.success:focus {
 .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
 
 .hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
+
+/* Animations */
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Keyframes */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 
 /*
  * Sizing Utilities

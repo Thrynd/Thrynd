@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "dev": "postcss src/index.css -o dist/thrynd.css --watch",
-    "build": "postcss src/index.css -o dist/thrynd.css",
-    "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production",
+    "build": "postcss src/index.css -o dist/thrynd.css && cp dist/thrynd.css docs-site/public/css/thrynd.css",
+    "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production && cp dist/thrynd.min.css docs-site/public/css/thrynd.min.css",
     "build:all": "npm run build && npm run build:min",
     "build:docs": "node scripts/generate-docs.js",
     "lint": "stylelint \"src/**/*.css\"",
