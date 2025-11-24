@@ -3,6 +3,109 @@
  * Card component styles with variants
  */
 
+/**
+ * @thrynd component card
+ * @description Container component for grouping related content with visual boundary
+ * @category layout
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent card
+ * @class card
+ * @usage Basic card with subtle border, general content grouping
+ * @example <div class="card"><div class="card-body">Content</div></div>
+ * @semantic Standard content container
+ */
+
+/**
+ * @thrynd variant elevated
+ * @parent card
+ * @class card-elevated
+ * @usage Featured content, interactive cards, hover effects
+ * @example <div class="card-elevated"><div class="card-body">Featured</div></div>
+ * @semantic Emphasized content with shadow and hover animation
+ */
+
+/**
+ * @thrynd variant outlined
+ * @parent card
+ * @class card-outlined
+ * @usage Strong visual boundary, form sections, grouped inputs
+ * @example <div class="card-outlined"><div class="card-body">Outlined</div></div>
+ * @semantic Content with prominent border
+ */
+
+/**
+ * @thrynd part header
+ * @parent card
+ * @class card-header
+ * @usage Card title area with bottom border
+ * @example <div class="card"><div class="card-header">Title</div><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part body
+ * @parent card
+ * @class card-body
+ * @usage Main content area with padding
+ * @example <div class="card"><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part footer
+ * @parent card
+ * @class card-footer
+ * @usage Actions area with top border and surface background
+ * @example <div class="card"><div class="card-body">Content</div><div class="card-footer">Actions</div></div>
+ */
+
+/**
+ * @thrynd part image
+ * @parent card
+ * @class card-img
+ * @usage Full-width image, typically at top of card
+ * @example <div class="card"><img class="card-img" src="..." alt="..."><div class="card-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part title
+ * @parent card
+ * @class card-title
+ * @usage Card heading with bold text
+ * @example <div class="card-body"><h3 class="card-title">Title</h3><p>Content</p></div>
+ */
+
+/**
+ * @thrynd modifier link
+ * @parent card
+ * @class card-link
+ * @usage Wraps card to make entire card clickable
+ * @example <a href="#" class="card-link"><div class="card">Clickable card</div></a>
+ * @combines Wrap around any card variant
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent card
+ * @keyboard Use card-link wrapper for keyboard-accessible clickable cards
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent card
+ * @screenReader Ensure card-link has descriptive text or aria-label
+ */
+
+/**
+ * @thrynd combination featuredCard
+ * @parent card
+ * @classes card-elevated card-img card-body card-title
+ * @usage Product cards, blog post previews
+ * @context E-commerce, content listings
+ */
+
 /* Base card styles */
 .card {
   background-color: var(--card-background, var(--color-white));

@@ -3,6 +3,291 @@
  * Alerts, badges, tooltips, progress bars
  */
 
+/**
+ * @thrynd component alert
+ * @description Contextual feedback messages for user actions and system status
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent alert
+ * @class alert-primary
+ * @usage General informational messages
+ * @example <div class="alert alert-primary">Information message</div>
+ * @semantic Neutral information
+ */
+
+/**
+ * @thrynd variant success
+ * @parent alert
+ * @class alert-success
+ * @usage Successful operations, confirmations
+ * @example <div class="alert alert-success">Operation completed successfully</div>
+ * @semantic Positive outcome
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent alert
+ * @class alert-danger
+ * @usage Errors, critical warnings
+ * @example <div class="alert alert-danger">An error occurred</div>
+ * @semantic Negative outcome or error
+ */
+
+/**
+ * @thrynd variant warning
+ * @parent alert
+ * @class alert-warning
+ * @usage Caution messages, non-critical issues
+ * @example <div class="alert alert-warning">Please review before continuing</div>
+ * @semantic Caution required
+ */
+
+/**
+ * @thrynd variant info
+ * @parent alert
+ * @class alert-info
+ * @usage Tips, helpful information
+ * @example <div class="alert alert-info">Tip: You can also use keyboard shortcuts</div>
+ * @semantic Helpful information
+ */
+
+/**
+ * @thrynd part title
+ * @parent alert
+ * @class alert-title
+ * @usage Bold heading within alert
+ * @example <div class="alert alert-success"><div class="alert-title">Success!</div>Your changes were saved.</div>
+ */
+
+/**
+ * @thrynd part close
+ * @parent alert
+ * @class alert-close
+ * @usage Dismissible alert close button
+ * @example <div class="alert alert-info"><button class="alert-close">&times;</button>Dismissible alert</div>
+ */
+
+/**
+ * @thrynd component badge
+ * @description Small status indicators and labels
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant primary
+ * @parent badge
+ * @class badge-primary
+ * @usage Default badge style
+ * @example <span class="badge badge-primary">New</span>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent badge
+ * @class badge-success
+ * @usage Positive status indicators
+ * @example <span class="badge badge-success">Active</span>
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent badge
+ * @class badge-danger
+ * @usage Negative or alert status
+ * @example <span class="badge badge-danger">Error</span>
+ */
+
+/**
+ * @thrynd variant warning
+ * @parent badge
+ * @class badge-warning
+ * @usage Pending or caution status
+ * @example <span class="badge badge-warning">Pending</span>
+ */
+
+/**
+ * @thrynd modifier outline
+ * @parent badge
+ * @class badge-outline
+ * @usage Outlined badge variant
+ * @example <span class="badge badge-primary badge-outline">Outlined</span>
+ * @combines Can combine with any badge color variant
+ */
+
+/**
+ * @thrynd modifier pill
+ * @parent badge
+ * @class badge-pill
+ * @usage Rounded pill shape
+ * @example <span class="badge badge-primary badge-pill">99+</span>
+ * @combines Can combine with any badge variant
+ */
+
+/**
+ * @thrynd size large
+ * @parent badge
+ * @class badge-lg
+ * @usage Larger badge for emphasis
+ * @example <span class="badge badge-primary badge-lg">Featured</span>
+ */
+
+/**
+ * @thrynd component tooltip
+ * @description Hover-triggered informational popups
+ * @category feedback
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent tooltip
+ * @class tooltip
+ * @usage Wrapper element for tooltip trigger
+ * @example <span class="tooltip">Hover me<span class="tooltip-text">Tooltip content</span></span>
+ */
+
+/**
+ * @thrynd part text
+ * @parent tooltip
+ * @class tooltip-text
+ * @usage The tooltip content element
+ * @example <span class="tooltip-text">Helpful information</span>
+ */
+
+/**
+ * @thrynd modifier bottom
+ * @parent tooltip
+ * @class tooltip-bottom
+ * @usage Position tooltip below trigger
+ * @example <span class="tooltip tooltip-bottom">Hover<span class="tooltip-text">Below</span></span>
+ */
+
+/**
+ * @thrynd component progress
+ * @description Visual progress indicators
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent progress
+ * @class progress
+ * @usage Progress bar container
+ * @example <div class="progress"><div class="progress-bar" style="width: 50%">50%</div></div>
+ */
+
+/**
+ * @thrynd part bar
+ * @parent progress
+ * @class progress-bar
+ * @usage The filled progress indicator
+ * @example <div class="progress-bar" style="width: 75%"></div>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent progress
+ * @class progress-bar-success
+ * @usage Success/complete progress
+ * @example <div class="progress"><div class="progress-bar progress-bar-success" style="width: 100%"></div></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent progress
+ * @class progress-sm
+ * @usage Compact progress bar
+ * @example <div class="progress progress-sm"><div class="progress-bar" style="width: 50%"></div></div>
+ */
+
+/**
+ * @thrynd size large
+ * @parent progress
+ * @class progress-lg
+ * @usage Larger progress bar with text
+ * @example <div class="progress progress-lg"><div class="progress-bar" style="width: 50%">50%</div></div>
+ */
+
+/**
+ * @thrynd component spinner
+ * @description Loading indicator animation
+ * @category feedback
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent spinner
+ * @class spinner
+ * @usage Standard loading spinner
+ * @example <div class="spinner"></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent spinner
+ * @class spinner-sm
+ * @usage Compact inline spinner
+ * @example <span class="spinner spinner-sm"></span> Loading...
+ */
+
+/**
+ * @thrynd size large
+ * @parent spinner
+ * @class spinner-lg
+ * @usage Large page-level spinner
+ * @example <div class="spinner spinner-lg"></div>
+ */
+
+/**
+ * @thrynd component toast
+ * @description Temporary notification messages
+ * @category feedback
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent toast
+ * @class toast
+ * @usage Base toast notification
+ * @example <div class="toast">Notification message</div>
+ */
+
+/**
+ * @thrynd variant success
+ * @parent toast
+ * @class toast-success
+ * @usage Success notification
+ * @example <div class="toast toast-success">Changes saved!</div>
+ */
+
+/**
+ * @thrynd variant danger
+ * @parent toast
+ * @class toast-danger
+ * @usage Error notification
+ * @example <div class="toast toast-danger">Failed to save</div>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent alert
+ * @required Use role="alert" for important alerts
+ */
+
+/**
+ * @thrynd accessibility screenReader
+ * @parent spinner
+ * @screenReader Add aria-label="Loading" or visually hidden text
+ */
+
 /* Alerts */
 .alert {
   padding: var(--space-4);

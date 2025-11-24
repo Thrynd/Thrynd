@@ -3,6 +3,227 @@
  * Modal dialogs and overlays
  */
 
+/**
+ * @thrynd component modal
+ * @description Dialog overlay for focused user interaction
+ * @category overlay
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd part backdrop
+ * @parent modal
+ * @class modal-backdrop
+ * @usage Semi-transparent overlay behind modal
+ * @example <div class="modal-backdrop show"></div>
+ */
+
+/**
+ * @thrynd variant default
+ * @parent modal
+ * @class modal
+ * @usage Modal container (centered flexbox)
+ * @example <div class="modal show"><div class="modal-dialog">...</div></div>
+ */
+
+/**
+ * @thrynd part dialog
+ * @parent modal
+ * @class modal-dialog
+ * @usage The modal content container with max-width
+ * @example <div class="modal-dialog"><div class="modal-header">...</div><div class="modal-body">...</div></div>
+ */
+
+/**
+ * @thrynd size small
+ * @parent modal
+ * @class modal-dialog-sm
+ * @usage Narrow modal (300px max-width)
+ * @example <div class="modal-dialog modal-dialog-sm">...</div>
+ */
+
+/**
+ * @thrynd size large
+ * @parent modal
+ * @class modal-dialog-lg
+ * @usage Wide modal (800px max-width)
+ * @example <div class="modal-dialog modal-dialog-lg">...</div>
+ */
+
+/**
+ * @thrynd size xlarge
+ * @parent modal
+ * @class modal-dialog-xl
+ * @usage Extra wide modal (1140px max-width)
+ * @example <div class="modal-dialog modal-dialog-xl">...</div>
+ */
+
+/**
+ * @thrynd modifier fullscreen
+ * @parent modal
+ * @class modal-dialog-fullscreen
+ * @usage Full viewport modal
+ * @example <div class="modal-dialog modal-dialog-fullscreen">...</div>
+ */
+
+/**
+ * @thrynd part header
+ * @parent modal
+ * @class modal-header
+ * @usage Modal title bar with close button
+ * @example <div class="modal-header"><h2 class="modal-title">Title</h2><button class="modal-close">&times;</button></div>
+ */
+
+/**
+ * @thrynd part title
+ * @parent modal
+ * @class modal-title
+ * @usage Modal heading text
+ * @example <h2 class="modal-title">Confirm Action</h2>
+ */
+
+/**
+ * @thrynd part close
+ * @parent modal
+ * @class modal-close
+ * @usage Close button in header
+ * @example <button class="modal-close" aria-label="Close">&times;</button>
+ */
+
+/**
+ * @thrynd part body
+ * @parent modal
+ * @class modal-body
+ * @usage Main modal content area
+ * @example <div class="modal-body"><p>Modal content here</p></div>
+ */
+
+/**
+ * @thrynd part footer
+ * @parent modal
+ * @class modal-footer
+ * @usage Action buttons area
+ * @example <div class="modal-footer"><button class="btn-secondary">Cancel</button><button class="btn-primary">Confirm</button></div>
+ */
+
+/**
+ * @thrynd state show
+ * @parent modal
+ * @class show
+ * @description Makes modal visible
+ * @example <div class="modal show">...</div>
+ */
+
+/**
+ * @thrynd component dropdown
+ * @description Toggle-activated menu overlay
+ * @category overlay
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd variant default
+ * @parent dropdown
+ * @class dropdown
+ * @usage Container for dropdown trigger and menu
+ * @example <div class="dropdown"><button class="dropdown-toggle">Menu</button><div class="dropdown-menu">...</div></div>
+ */
+
+/**
+ * @thrynd part toggle
+ * @parent dropdown
+ * @class dropdown-toggle
+ * @usage Element that triggers dropdown
+ * @example <button class="dropdown-toggle">Options</button>
+ */
+
+/**
+ * @thrynd part menu
+ * @parent dropdown
+ * @class dropdown-menu
+ * @usage Dropdown content container
+ * @example <div class="dropdown-menu"><a class="dropdown-item" href="#">Option 1</a></div>
+ */
+
+/**
+ * @thrynd part item
+ * @parent dropdown
+ * @class dropdown-item
+ * @usage Individual menu option
+ * @example <a class="dropdown-item" href="#">Edit</a>
+ */
+
+/**
+ * @thrynd part divider
+ * @parent dropdown
+ * @class dropdown-divider
+ * @usage Horizontal separator between items
+ * @example <div class="dropdown-divider"></div>
+ */
+
+/**
+ * @thrynd modifier right
+ * @parent dropdown
+ * @class dropdown-menu-right
+ * @usage Align menu to right edge of trigger
+ * @example <div class="dropdown-menu dropdown-menu-right">...</div>
+ */
+
+/**
+ * @thrynd component popover
+ * @description Rich tooltip with header and body
+ * @category overlay
+ * @complexity simple
+ */
+
+/**
+ * @thrynd variant default
+ * @parent popover
+ * @class popover
+ * @usage Positioned content popup
+ * @example <div class="popover"><div class="popover-header">Title</div><div class="popover-body">Content</div></div>
+ */
+
+/**
+ * @thrynd part header
+ * @parent popover
+ * @class popover-header
+ * @usage Popover title
+ * @example <div class="popover-header">Info</div>
+ */
+
+/**
+ * @thrynd part body
+ * @parent popover
+ * @class popover-body
+ * @usage Popover content
+ * @example <div class="popover-body">More details here</div>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent modal
+ * @required Use aria-modal="true" and role="dialog" on modal
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent modal
+ * @required Trap focus within modal when open
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent modal
+ * @keyboard Escape key should close modal
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent dropdown
+ * @required Use aria-expanded on toggle, aria-haspopup="menu"
+ */
+
 /* Modal backdrop */
 .modal-backdrop {
   position: fixed;

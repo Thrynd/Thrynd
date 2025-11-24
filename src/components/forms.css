@@ -3,6 +3,122 @@
  * Form component styles
  */
 
+/**
+ * @thrynd component form
+ * @description Form elements for user input including text fields, selects, checkboxes
+ * @category form
+ * @complexity moderate
+ */
+
+/**
+ * @thrynd part group
+ * @parent form
+ * @class form-group
+ * @usage Wrapper for label + input pairs with consistent spacing
+ * @example <div class="form-group"><label>Name</label><input type="text" class="form-input"></div>
+ */
+
+/**
+ * @thrynd variant input
+ * @parent form
+ * @class form-input
+ * @usage Explicit input styling (also applied to text, email, password inputs by default)
+ * @example <input type="text" class="form-input" placeholder="Enter text">
+ * @semantic Standard text input field
+ */
+
+/**
+ * @thrynd state error
+ * @parent form
+ * @class form-input-error
+ * @usage Input validation failed
+ * @example <input type="email" class="form-input form-input-error"><span class="form-error">Invalid email</span>
+ * @attribute Also supports .error class on input
+ */
+
+/**
+ * @thrynd state success
+ * @parent form
+ * @class form-input-success
+ * @usage Input validation passed
+ * @example <input type="email" class="form-input form-input-success"><span class="form-success">Looks good!</span>
+ * @attribute Also supports .success class on input
+ */
+
+/**
+ * @thrynd state disabled
+ * @parent form
+ * @attribute disabled
+ * @description Grayed out with no interaction
+ * @example <input type="text" class="form-input" disabled>
+ */
+
+/**
+ * @thrynd part checkbox
+ * @parent form
+ * @class form-checkbox
+ * @usage Styled checkbox input
+ * @example <input type="checkbox" class="form-checkbox"> Accept terms
+ */
+
+/**
+ * @thrynd part radio
+ * @parent form
+ * @class form-radio
+ * @usage Styled radio button input
+ * @example <input type="radio" name="option" class="form-radio"> Option A
+ */
+
+/**
+ * @thrynd part help
+ * @parent form
+ * @class form-help
+ * @usage Helper text below input
+ * @example <input type="text" class="form-input"><span class="form-help">Enter your full name</span>
+ */
+
+/**
+ * @thrynd part error-message
+ * @parent form
+ * @class form-error
+ * @usage Error message text in danger color
+ * @example <span class="form-error">This field is required</span>
+ */
+
+/**
+ * @thrynd part success-message
+ * @parent form
+ * @class form-success
+ * @usage Success message text in success color
+ * @example <span class="form-success">Username available</span>
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent form
+ * @required Always use label elements associated with inputs
+ */
+
+/**
+ * @thrynd accessibility required
+ * @parent form
+ * @required Use aria-describedby to link inputs to help/error text
+ */
+
+/**
+ * @thrynd accessibility keyboard
+ * @parent form
+ * @keyboard All form elements focusable with visible focus ring
+ */
+
+/**
+ * @thrynd combination validatedInput
+ * @parent form
+ * @classes form-group form-input form-error
+ * @usage Form field with validation feedback
+ * @context User registration, data entry forms
+ */
+
 /* Form group */
 .form-group {
   margin-bottom: var(--space-4);
