@@ -5,11 +5,11 @@
 <h1 align="center">Thrynd</h1>
 
 <p align="center">
-  <strong>The CSS framework built for the AI age</strong>
+  <strong>Modern CSS framework built for the AI age</strong>
 </p>
 
 <p align="center">
-  Beautiful defaults. Zero config. LLM-optimized documentation.
+  Pure CSS. Zero runtime. LLM-optimized documentation.
 </p>
 
 <p align="center">
@@ -30,41 +30,42 @@
 
 ## Why Thrynd?
 
-Most CSS frameworks require configuration, build steps, or extensive class assembly. Thrynd is different:
+- **Pure CSS, zero runtime** - No JavaScript dependencies, works seamlessly with React, Vue, Svelte, or any stack
+- **AI-native documentation** - Structured metadata enables 95%+ accurate code generation from ChatGPT, Claude, and other LLMs
+- **6 complete themes** - Switch your entire design system with a single class change
+- **Beautiful defaults** - Components look great out of the box, no assembly required
+- **Modern CSS features** - Built on CSS custom properties, Grid, and Flexbox
 
-- **One line to beautiful** - Add a single `<link>` tag and your HTML looks great
-- **6 complete themes** - Switch your entire design with one class change
-- **AI-native documentation** - Structured for 95%+ accurate code generation from ChatGPT, Claude, and other LLMs
-- **Zero dependencies** - Pure CSS, works with any framework or vanilla HTML
+## Installation
 
-## Quick Start
-
-### CDN (Recommended)
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
-```
-
-That's it. Your HTML is now styled.
-
-### NPM
+### npm (Recommended)
 
 ```bash
 npm install thrynd
 ```
 
+```js
+// In your entry file
+import 'thrynd';
+```
+
+Or import in CSS:
+
 ```css
 @import 'thrynd';
 ```
 
-## Example
+### CDN (Rapid Prototyping)
+
+For quick prototypes, CodePen experiments, or static sites:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
-</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
+```
+
+## Quick Example
+
+```html
 <body class="theme-modern">
   <div class="container py-8">
     <div class="card-elevated max-w-md mx-auto">
@@ -76,7 +77,6 @@ npm install thrynd
     </div>
   </div>
 </body>
-</html>
 ```
 
 ## Themes
@@ -93,7 +93,7 @@ Switch themes instantly with a single class:
 | Corporate | `theme-corporate` | Professional and trustworthy |
 
 ```javascript
-// Switch themes dynamically
+// Dynamic theme switching
 document.body.className = 'theme-neon';
 ```
 
@@ -147,17 +147,13 @@ document.body.className = 'theme-neon';
 </form>
 ```
 
-### Alerts
+### Alerts & Badges
 
 ```html
 <div class="alert alert-success">Operation completed successfully.</div>
 <div class="alert alert-warning">Please review before continuing.</div>
 <div class="alert alert-danger">An error occurred.</div>
-```
 
-### Badges
-
-```html
 <span class="badge badge-primary">New</span>
 <span class="badge badge-success">Active</span>
 <span class="badge badge-warning">Beta</span>
@@ -165,7 +161,7 @@ document.body.className = 'theme-neon';
 
 ## Utilities
 
-Thrynd includes comprehensive utility classes:
+Comprehensive utility classes with responsive variants:
 
 ```html
 <!-- Spacing -->
@@ -208,28 +204,67 @@ All utilities support responsive breakpoints:
 | `xl:` | 1280px |
 | `2xl:` | 1536px |
 
-## LLM-Optimized
+## AI-Optimized Documentation
 
-Thrynd's documentation is structured for AI code generation:
+Thrynd's documentation is uniquely structured for LLM code generation:
+
+- **Structured JSON metadata** for every component
+- **Complete code examples** with explanatory comments
+- **Anti-pattern detection** with severity levels
+- **Decision trees** for component selection
+- **Accessibility requirements** per component
 
 ```
-Prompt: "Create a pricing card with Thrynd"
-
-Result: Working code with 95%+ accuracy
+Prompt: "Create a pricing card with Thrynd CSS"
+Result: Working, accessible code on first attempt
 ```
 
-The documentation includes:
-- Structured JSON component metadata
-- Complete code examples for every component
-- Anti-pattern detection with severity levels
-- Decision trees for component selection
-- Accessibility requirements per component
+## Framework Integration
+
+### React
+
+```jsx
+import 'thrynd';
+
+function App() {
+  return (
+    <div className="theme-modern">
+      <button className="btn-primary">Click me</button>
+    </div>
+  );
+}
+```
+
+### Vue
+
+```vue
+<script setup>
+import 'thrynd';
+</script>
+
+<template>
+  <div class="theme-modern">
+    <button class="btn-primary">Click me</button>
+  </div>
+</template>
+```
+
+### Svelte
+
+```svelte
+<script>
+  import 'thrynd';
+</script>
+
+<div class="theme-modern">
+  <button class="btn-primary">Click me</button>
+</div>
+```
 
 ## Bundle Size
 
 | Build | Size |
 |-------|------|
-| Development | 106 KB |
 | Minified | 79 KB |
 | Gzipped | ~10 KB |
 
@@ -241,7 +276,7 @@ Includes 6 themes, 40+ components, and 1000+ utility classes.
 - Firefox (last 2 versions)
 - Safari (last 2 versions)
 
-Requires CSS Custom Properties, Grid, and Flexbox. IE is not supported.
+Built on modern CSS features: Custom Properties, Grid, Flexbox. IE is not supported.
 
 ## Development
 
@@ -271,5 +306,5 @@ Contributions welcome! Please read our [Contributing Guide](CONTRIBUTING.md) bef
 
 <p align="center">
   <strong>Built for the AI age</strong><br>
-  <sub>Beautiful defaults. Zero config. Works everywhere.</sub>
+  <sub>Pure CSS. Zero runtime. Beautiful defaults.</sub>
 </p>
