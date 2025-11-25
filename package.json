@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "dev": "postcss src/index.css -o dist/thrynd.css --watch",
-    "build": "postcss src/index.css -o dist/thrynd.css && cp dist/thrynd.css docs-site/public/css/thrynd.css",
-    "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production && cp dist/thrynd.min.css docs-site/public/css/thrynd.min.css",
+    "build": "postcss src/index.css -o dist/thrynd.css",
+    "build:min": "postcss src/index.css -o dist/thrynd.min.css --env production",
     "build:all": "npm run build && npm run build:min",
     "build:docs": "node scripts/generate-docs.js",
     "lint": "stylelint \"src/**/*.css\"",
@@ -21,7 +21,7 @@
     "test:all": "npm run lint && npm run build:all",
     "test:a11y": "node tests/accessibility/run-tests.js",
     "test:a11y:ci": "pa11y-ci",
-    "prepublishOnly": "npm run build:all && npm run build:docs"
+    "prepublishOnly": "npm run build:all"
   },
   "keywords": [
     "css",
@@ -36,15 +36,15 @@
     "tailwind-alternative",
     "bootstrap-alternative"
   ],
-  "author": "Your Name",
+  "author": "Thrynd",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/thrynd.git"
+    "url": "https://github.com/thrynd/thrynd.git"
   },
-  "homepage": "https://thrynd.css",
+  "homepage": "https://thrynd.dev",
   "bugs": {
-    "url": "https://github.com/yourusername/thrynd/issues"
+    "url": "https://github.com/thrynd/thrynd/issues"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
