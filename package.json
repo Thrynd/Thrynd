@@ -1,6 +1,6 @@
 {
   "name": "thrynd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A modern, opinionated CSS framework with beautiful pre-configured components, theme presets, and LLM-friendly documentation",
   "main": "dist/thrynd.css",
   "style": "dist/thrynd.css",
