@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/thrynd-d.png" alt="Thrynd" width="200" height="200">
+  <a href="https://github.com/Thrynd/Thrynd">
+    <img src="https://github.com/Thrynd/Thrynd/blob/main/thrynd.png?raw=true" alt="Thrynd" width="200" height="200">
+  </a>
 </p>
 
 <h1 align="center">Thrynd</h1>
@@ -13,9 +15,10 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Thrynd/Thrynd/stargazers"><img src="https://img.shields.io/github/stars/Thrynd/Thrynd?style=flat-square" alt="GitHub stars"></a>
   <a href="https://www.npmjs.com/package/thrynd"><img src="https://img.shields.io/npm/v/thrynd.svg?style=flat-square" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/thrynd"><img src="https://img.shields.io/npm/dm/thrynd.svg?style=flat-square" alt="npm downloads"></a>
-  <a href="https://github.com/thrynd/thrynd/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/thrynd.svg?style=flat-square" alt="license"></a>
+  <a href="https://github.com/Thrynd/Thrynd/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/thrynd.svg?style=flat-square" alt="license"></a>
   <a href="https://bundlephobia.com/package/thrynd"><img src="https://img.shields.io/bundlephobia/minzip/thrynd?style=flat-square" alt="bundle size"></a>
 </p>
 
@@ -30,22 +33,21 @@
 
 ## Why Thrynd?
 
-- **Pure CSS, zero runtime** - No JavaScript dependencies, works seamlessly with React, Vue, Svelte, or any stack
-- **AI-native documentation** - Structured metadata enables 95%+ accurate code generation from ChatGPT, Claude, and other LLMs
+- **Pure CSS, zero runtime** - No JavaScript dependencies, works with React, Vue, Svelte, or vanilla HTML
+- **AI-native documentation** - Structured metadata enables accurate code generation from ChatGPT, Claude, and other LLMs
 - **6 complete themes** - Switch your entire design system with a single class change
 - **Beautiful defaults** - Components look great out of the box, no assembly required
-- **Modern CSS features** - Built on CSS custom properties, Grid, and Flexbox
+- **Modern CSS** - Built on CSS custom properties, Grid, and Flexbox
 
 ## Installation
 
-### npm (Recommended)
+### npm
 
 ```bash
 npm install thrynd
 ```
 
 ```js
-// In your entry file
 import 'thrynd';
 ```
 
@@ -55,15 +57,13 @@ Or import in CSS:
 @import 'thrynd';
 ```
 
-### CDN (Rapid Prototyping)
-
-For quick prototypes, CodePen experiments, or static sites:
+### CDN
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/thrynd@latest/dist/thrynd.min.css">
 ```
 
-## Quick Example
+## Quick Start
 
 ```html
 <body class="theme-modern">
@@ -85,7 +85,7 @@ Switch themes instantly with a single class:
 
 | Theme | Class | Description |
 |-------|-------|-------------|
-| Modern | `theme-modern` | Clean, contemporary design (default) |
+| Modern | `theme-modern` | Clean, contemporary design |
 | Classic | `theme-classic` | Traditional elegance with serif fonts |
 | Minimal | `theme-minimal` | Brutalist, focused simplicity |
 | Neon | `theme-neon` | Cyberpunk vibes with electric colors |
@@ -93,7 +93,6 @@ Switch themes instantly with a single class:
 | Corporate | `theme-corporate` | Professional and trustworthy |
 
 ```javascript
-// Dynamic theme switching
 document.body.className = 'theme-neon';
 ```
 
@@ -107,7 +106,6 @@ document.body.className = 'theme-neon';
 <button class="btn-danger">Danger</button>
 <button class="btn-ghost">Ghost</button>
 
-<!-- Sizes -->
 <button class="btn-primary btn-sm">Small</button>
 <button class="btn-primary btn-lg">Large</button>
 ```
@@ -147,7 +145,7 @@ document.body.className = 'theme-neon';
 </form>
 ```
 
-### Alerts & Badges
+### Alerts and Badges
 
 ```html
 <div class="alert alert-success">Operation completed successfully.</div>
@@ -156,7 +154,6 @@ document.body.className = 'theme-neon';
 
 <span class="badge badge-primary">New</span>
 <span class="badge badge-success">Active</span>
-<span class="badge badge-warning">Beta</span>
 ```
 
 ## Utilities
@@ -184,18 +181,6 @@ Comprehensive utility classes with responsive variants:
 
 ### Responsive Prefixes
 
-All utilities support responsive breakpoints:
-
-```html
-<div class="flex flex-col md:flex-row">
-  <!-- Stacks vertically on mobile, horizontal on tablet+ -->
-</div>
-
-<div class="text-center lg:text-left">
-  <!-- Centered on mobile, left-aligned on desktop -->
-</div>
-```
-
 | Prefix | Breakpoint |
 |--------|------------|
 | `sm:` | 640px |
@@ -204,15 +189,21 @@ All utilities support responsive breakpoints:
 | `xl:` | 1280px |
 | `2xl:` | 1536px |
 
+```html
+<div class="flex flex-col md:flex-row">
+  <!-- Stacks vertically on mobile, horizontal on tablet+ -->
+</div>
+```
+
 ## AI-Optimized Documentation
 
-Thrynd's documentation is uniquely structured for LLM code generation:
+Thrynd documentation is structured for LLM code generation:
 
-- **Structured JSON metadata** for every component
-- **Complete code examples** with explanatory comments
-- **Anti-pattern detection** with severity levels
-- **Decision trees** for component selection
-- **Accessibility requirements** per component
+- Structured JSON metadata for every component
+- Complete code examples with explanatory comments
+- Anti-pattern detection with severity levels
+- Decision trees for component selection
+- Accessibility requirements per component
 
 ```
 Prompt: "Create a pricing card with Thrynd CSS"
@@ -272,17 +263,17 @@ Includes 6 themes, 40+ components, and 1000+ utility classes.
 
 ## Browser Support
 
-- Chrome/Edge (last 2 versions)
-- Firefox (last 2 versions)
-- Safari (last 2 versions)
+- Chrome and Edge
+- Firefox
+- Safari
 
-Built on modern CSS features: Custom Properties, Grid, Flexbox. IE is not supported.
+Built on modern CSS features. IE is not supported.
 
 ## Development
 
 ```bash
-git clone https://github.com/thrynd/thrynd.git
-cd thrynd
+git clone https://github.com/Thrynd/Thrynd.git
+cd Thrynd
 npm install
 
 npm run build       # Build CSS
@@ -292,10 +283,10 @@ npm run dev         # Watch mode
 
 ## Contributing
 
-Contributions welcome! Please read our [Contributing Guide](CONTRIBUTING.md) before submitting PRs.
+Contributions welcome. Please read our [Contributing Guide](CONTRIBUTING.md) before submitting PRs.
 
-- Report bugs via [GitHub Issues](https://github.com/thrynd/thrynd/issues)
-- Suggest features via [GitHub Discussions](https://github.com/thrynd/thrynd/discussions)
+- Report bugs via [GitHub Issues](https://github.com/Thrynd/Thrynd/issues)
+- Suggest features via [GitHub Discussions](https://github.com/Thrynd/Thrynd/discussions)
 - Submit PRs for bug fixes, features, or documentation
 
 ## License
