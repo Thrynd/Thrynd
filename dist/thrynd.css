@@ -3605,7 +3605,8 @@ select.success:focus {
 
 /* Popover */
 
-.popover-wrapper {
+.popover-wrapper,
+.popover-container {
   position: relative;
   display: inline-block;
 }
@@ -3627,7 +3628,9 @@ select.success:focus {
 /* CSS-only popover - shows on hover/focus */
 
 .popover-wrapper:hover .popover,
+.popover-container:hover .popover,
 .popover-wrapper:focus-within .popover,
+.popover-container:focus-within .popover,
 .popover.show {
   opacity: 1;
   visibility: visible;
