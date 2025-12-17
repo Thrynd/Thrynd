@@ -3543,9 +3543,18 @@ select.success:focus {
   box-shadow: var(--shadow-lg);
 }
 
+/* CSS-only dropdown - shows on focus-within */
+
+.dropdown:focus-within .dropdown-menu,
 .dropdown-menu.show {
   display: block;
   animation: fadeInDown var(--transition-fast);
+}
+
+/* Allow dropdown toggle to be focusable */
+
+.dropdown-toggle:focus {
+  outline: none;
 }
 
 @keyframes fadeInDown {
@@ -3596,6 +3605,11 @@ select.success:focus {
 
 /* Popover */
 
+.popover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
 .popover {
   position: absolute;
   z-index: var(--z-popover);
@@ -3605,6 +3619,48 @@ select.success:focus {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+
+/* CSS-only popover - shows on hover/focus */
+
+.popover-wrapper:hover .popover,
+.popover-wrapper:focus-within .popover,
+.popover.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popover positions */
+
+.popover-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+}
+
+.popover-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+}
+
+.popover-left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 0.5rem;
+}
+
+.popover-right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.5rem;
 }
 
 .popover-header {
