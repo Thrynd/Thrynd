@@ -227,6 +227,36 @@ input[type="radio"]:focus {
   box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
+/* Checkbox and Radio label wrappers */
+label.form-checkbox,
+label.form-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+label.form-checkbox:last-child,
+label.form-radio:last-child {
+  margin-bottom: 0;
+}
+
+label.form-checkbox input,
+label.form-radio input {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+label.form-checkbox span,
+label.form-radio span {
+  line-height: 1.4;
+}
+
 /* File input */
 input[type="file"] {
   padding: var(--space-2);
