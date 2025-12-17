@@ -1665,6 +1665,7 @@ a.btn-ghost {
   background-color: var(--card-background, var(--color-white));
   border: 1px solid var(--card-border, var(--color-border));
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   overflow: hidden;
 }
 
@@ -1674,6 +1675,7 @@ a.btn-ghost {
   background-color: var(--card-background, var(--color-white));
   border: 1px solid transparent;
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   box-shadow: var(--card-shadow, var(--shadow-md));
   overflow: hidden;
 }
@@ -1688,6 +1690,7 @@ a.btn-ghost {
   background-color: var(--card-background, var(--color-white));
   border: 2px solid var(--card-border, var(--color-border));
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   overflow: hidden;
 }
 
@@ -5059,6 +5062,7 @@ select.success:focus {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -5075,6 +5079,7 @@ select.success:focus {
   0%, 100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -5085,6 +5090,7 @@ select.success:focus {
     transform: translateY(-25%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
+
   50% {
     transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Thrynd/Thrynd">
-    <img src="https://github.com/Thrynd/Thrynd/blob/main/thrynd.png?raw=true" alt="Thrynd" width="200" height="200">
+    <img src="https://github.com/Thrynd/Thrynd/blob/main/thrynd.png?raw=true" alt="Thrynd" width="130">
   </a>
 </p>
 
@@ -19,14 +19,13 @@
   <a href="https://www.npmjs.com/package/thrynd"><img src="https://img.shields.io/npm/v/thrynd.svg?style=flat-square" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/thrynd"><img src="https://img.shields.io/npm/dm/thrynd.svg?style=flat-square" alt="npm downloads"></a>
   <a href="https://github.com/Thrynd/Thrynd/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/thrynd.svg?style=flat-square" alt="license"></a>
-  <a href="https://bundlephobia.com/package/thrynd"><img src="https://img.shields.io/bundlephobia/minzip/thrynd?style=flat-square" alt="bundle size"></a>
 </p>
 
 <p align="center">
-  <a href="https://thrynd.dev">Documentation</a> &bull;
-  <a href="https://thrynd.dev/playground">Playground</a> &bull;
-  <a href="https://thrynd.dev/docs/themes">Themes</a> &bull;
-  <a href="https://thrynd.dev/docs/components">Components</a>
+  <a href="https://thrynd.com">Documentation</a> &bull;
+  <a href="https://thrynd.com/playground">Playground</a> &bull;
+  <a href="https://thrynd.com/docs/themes">Themes</a> &bull;
+  <a href="https://thrynd.com/docs/components">Components</a>
 </p>
 
 ---

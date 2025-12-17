@@ -111,6 +111,7 @@
   background-color: var(--card-background, var(--color-white));
   border: 1px solid var(--card-border, var(--color-border));
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   overflow: hidden;
 }
 
@@ -119,6 +120,7 @@
   background-color: var(--card-background, var(--color-white));
   border: 1px solid transparent;
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   box-shadow: var(--card-shadow, var(--shadow-md));
   overflow: hidden;
 }
@@ -133,6 +135,7 @@
   background-color: var(--card-background, var(--color-white));
   border: 2px solid var(--card-border, var(--color-border));
   border-radius: var(--card-radius, var(--radius-lg));
+  padding: var(--card-padding, 1rem);
   overflow: hidden;
 }
 
