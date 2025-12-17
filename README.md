@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Thrynd/Thrynd">
-    <img src="https://github.com/Thrynd/Thrynd/blob/main/thrynd.png?raw=true" alt="Thrynd" width="130">
+    <img src="https://raw.githubusercontent.com/Thrynd/Thrynd/main/thrynd.png" alt="Thrynd" width="130">
   </a>
 </p>
 
